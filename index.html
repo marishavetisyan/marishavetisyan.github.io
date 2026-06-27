@@ -316,9 +316,9 @@ function calc() {
   if (!auto) {
     const motorPrice = (sqm <= 10) ? 147000 : 160000;
     total -= motorPrice;
-    lines.push(`● Կոմպլեկտ (5 սեկցիա) - ${(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Կոմպլեկտ  - ${(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
   } else {
-    lines.push(`● Կոմպլեկտ (5 սեկցիա) - ${(complect).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Կոմպլեկտ - ${(complect).toLocaleString()}&nbsp;AMD`);
   }
 
 // height
@@ -335,8 +335,8 @@ function calc() {
     } else {
       total+= Math.ceil(panelsDifference)*panelPrice * w / 6;
       if(Math.ceil(panelsDifference) !== 0) {
-        lines.push(`● Լրացուցիչ սեկցիա <br>
-          ${Math.ceil(panelsDifference)} հատ ${w} մետր պանել - 
+        lines.push(`● Լրացուցիչ սեկցիաներ <br>
+          ${Math.ceil(panelsDifference)} հատ ${w}x0.5մ սեկցիա - 
           ${parseInt(Math.ceil(panelsDifference) * panelPrice * w / 6)}&nbsp;AMD
           `);
       }
@@ -353,16 +353,16 @@ function calc() {
   }
 
   let passingDoor = 200000;
-//assembly
-  if (wMatched&&hMatched) {
-  } else {
-    total += assembly;
-    if(assembly)lines.push("● Կտրում - " + assembly/1000 + ",000&nbsp;AMD");
-  }
 
     if (door) {
     total += passingDoor;
     lines.push("● Դռնակ / կալիտկա - 200,000&nbsp;AMD");
+  }
+//assembly
+  if (wMatched&&hMatched) {
+  } else {
+    total += assembly;
+    if(assembly)lines.push("● Հավաքում - " + assembly/1000 + ",000&nbsp;AMD");
   }
 //installation
   if (install) {
