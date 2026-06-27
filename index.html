@@ -6,6 +6,38 @@
 <title>Դարպասի հաշվիչ</title>
 
 <style>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#logo {
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #logo {
+        order: -1;      /* logo on top */
+    }
+
+    .card {
+        width: 70%;
+        max-width: 500px;
+        background: #fff;
+        padding: 22px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border-top: 6px solid #ff7a00;
+        position: relative;
+    }
+}
 body {
   margin: 0;
   font-family: system-ui, Arial;
@@ -13,19 +45,19 @@ body {
   color: #222;
 }
 
-.hero {
+.container {
   display: flex;
   gap: 40px;
   padding: 60px 10%;
   align-items: center;
 }
 
-.hero h1 {
+.container h1 {
   font-size: 42px;
   margin: 0;
 }
 
-.hero p {
+.container p {
   color: #666;
   margin-top: 10px;
 }
@@ -99,13 +131,11 @@ button {
 
 <body>
 
-<div class="hero">
-
-  <div>
-    <h1>Master Gate</h1>
+<div class="container">
+  <div id="logo">
+    <img style="width:170px;" src="https://scontent.fevn15-1.fna.fbcdn.net/v/t39.30808-6/305578590_561645995789487_6168990027862965789_n.png?stp=dst-png&cstp=mx1736x1736&ctp=s1736x1736&_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lBAPU_LLLbMQ7kNvwGwUtNQ&_nc_oc=AdpK6PstYcpJ694lQKuj4GlnF49MjAXfF5kkfdkxQQbyGlrUUFSFa0RHAOUXPLnD9O0&_nc_zt=23&_nc_ht=scontent.fevn15-1.fna&_nc_gid=Xp_6cmo9VJheqoLCu1lvpg&_nc_ss=7b2a8&oh=00_Af_Z2W5_qsEEZHRZn7CRpWEzICtWqTGtzN8cgHfz6D9xCQ&oe=6A45A97D">
     <p>Հաշվիր քո դարպասի արժեքը 30 վայրկյանում</p>
   </div>
-
   <div class="card">
 
       <div class="row">
