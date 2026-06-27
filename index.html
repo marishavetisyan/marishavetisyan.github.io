@@ -22,7 +22,7 @@ img {
     text-align: center;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .container {
         flex-direction: column;
         gap: 30px;
@@ -50,12 +50,11 @@ body {
 }
 
 .minus  {
-  margin: 10px;
-  width: 15%;
+  margin-left: auto;
+  
 }
 .plus {
-  margin: 10px;
-  width: 15%;
+  margin-left: auto;
 }
 
 .container {
@@ -165,24 +164,49 @@ button {
   <div class="card">
 
     <div class="row">
-      <label style="display:block; margin-bottom:20px;">
-        Լայնություն (մ): 
-        <span id="wVal">3.2</span>          
-          <button class="minus" type="button" onclick="changeW(-0.1)">−</button>
-          <button class="plus" type="button" onclick="changeW(0.1)">+</button>
-          <input type="range" id="w" min="2" max="6" step="0.1" value="3.2"
-            oninput="syncW(this.value)" style="flex:1;">
-      </label>
-      <label style="display:block; margin-bottom:20px;">
-        Բարձրություն (մ): 
-        <span id="hVal">2.5</span>          
-          <button class="minus" type="button" onclick="changeH(-0.1)">−</button>
-          <button class="plus" type="button" onclick="changeH(0.1)">+</button>
-          <input type="range" id="h" min="2" max="4" step="0.1" value="2.5"
-            oninput="syncH(this.value)" style="flex:1;">
-      </label>
+
+  <label style="display:block; margin-bottom:20px;">
+
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      
+      <span>
+        Լայնություն (մ): <span id="wVal">3.2</span>
+      </span>
+
+      <div style="display:flex; gap:6px;">
+        <button class="minus" type="button" onclick="changeW(-0.1)">−</button>
+        <button class="plus" type="button" onclick="changeW(0.1)">+</button>
+      </div>
 
     </div>
+
+    <input type="range" id="w" min="2" max="6" step="0.1" value="3.2"
+      oninput="syncW(this.value)" style="width:100%; margin-top:8px;">
+
+  </label>
+
+
+  <label style="display:block; margin-bottom:20px;">
+
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      
+      <span>
+        Բարձրություն (մ): <span id="hVal">2.5</span>
+      </span>
+
+      <div style="display:flex; gap:6px;">
+        <button class="minus" type="button" onclick="changeH(-0.1)">−</button>
+        <button class="plus" type="button" onclick="changeH(0.1)">+</button>
+      </div>
+
+    </div>
+
+    <input type="range" id="h" min="2" max="4" step="0.1" value="2.5"
+      oninput="syncH(this.value)" style="width:100%; margin-top:8px;">
+
+  </label>
+
+</div>
 
     <div style="margin-top:10px;">
       <label style="display:inline-flex; align-items:center; gap:6px;">
