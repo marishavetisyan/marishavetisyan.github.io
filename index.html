@@ -49,6 +49,15 @@ body {
   color: #222;
 }
 
+.minus  {
+  margin: 10px;
+  width: 15%;
+}
+.plus {
+  margin: 10px;
+  width: 15%;
+}
+
 .container {
   display: flex;
   gap: 40px;
@@ -79,8 +88,18 @@ body {
 }
 
 .row {
+  padding: 0 12px;
+}
+
+.row label {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 8px;
+  width: 93%;
+}
+
+.row input[type="range"] {
+  width: 100%;
 }
 
 label {
@@ -145,14 +164,25 @@ button {
   </div>
   <div class="card">
 
-      <div class="row">
-          <label>Լայնություն (մ) 
-            <input value="3.2" id="w" type="number" step="0.1" min="2" max="6" inputmode="decimal">
-          </label>
-          <label>Բարձրություն (մ)
-            <input value="2.5" id="h" type="number" step="0.1" min="1.5" max="4" inputmode="decimal">
-          </label>
-      </div>
+    <div class="row">
+      <label style="display:block; margin-bottom:20px;">
+        Լայնություն (մ): 
+        <span id="wVal">3.2</span>          
+          <button class="minus" type="button" onclick="changeW(-0.1)">−</button>
+          <button class="plus" type="button" onclick="changeW(0.1)">+</button>
+          <input type="range" id="w" min="2" max="6" step="0.1" value="3.2"
+            oninput="syncW(this.value)" style="flex:1;">
+      </label>
+      <label style="display:block; margin-bottom:20px;">
+        Բարձրություն (մ): 
+        <span id="hVal">2.5</span>          
+          <button class="minus" type="button" onclick="changeH(-0.1)">−</button>
+          <button class="plus" type="button" onclick="changeH(0.1)">+</button>
+          <input type="range" id="h" min="2" max="4" step="0.1" value="2.5"
+            oninput="syncH(this.value)" style="flex:1;">
+      </label>
+
+    </div>
 
     <div style="margin-top:10px;">
       <label style="display:inline-flex; align-items:center; gap:6px;">
@@ -192,6 +222,39 @@ const products = [
   { w: 4.5, price: 793000 }
 ];
 const stdh = 2.5;
+
+const w = document.getElementById('w');
+const wVal = document.getElementById('wVal');
+const h = document.getElementById('h');
+const hVal = document.getElementById('hVal');
+
+function syncW(val){
+    wVal.textContent = Number(val).toFixed(1);
+  }
+
+function changeW(delta){
+    let newValue = parseFloat(w.value) + delta;
+
+    // սահմանների պահպանում
+    newValue = Math.max(2, Math.min(6, newValue));
+
+    w.value = newValue.toFixed(1);
+    syncW(newValue);
+}
+
+function syncH(val){
+    hVal.textContent = Number(val).toFixed(1);
+  }
+
+function changeH(delta){
+    let newValue = parseFloat(h.value) + delta;
+
+    // սահմանների պահպանում
+    newValue = Math.max(2, Math.min(6, newValue));
+
+    h.value = newValue.toFixed(1);
+    syncH(newValue);
+}
 
 function calc() {
 
