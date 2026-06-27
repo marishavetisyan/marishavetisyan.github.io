@@ -32,6 +32,7 @@ body {
 
 .card {
   width: 420px;
+  min-width: 207px;
   background: #fff;
   padding: 22px;
   border-radius: 16px;
@@ -133,7 +134,7 @@ button {
     <div>
       <label style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
         Տեղադրում
-        <input type="checkbox" id="door">
+        <input type="checkbox" id="install">
       </label>
     </div>
 
@@ -162,6 +163,7 @@ function calc() {
 
   const auto = document.getElementById("auto").checked;
   const door = document.getElementById("door").checked;
+  const install = document.getElementById("install").checked;
 
   let wSelected = products.find(p => p.w === w);
   let hSelected = stdh === h;
@@ -190,9 +192,9 @@ function calc() {
   if (!auto) {
     const motorPrice = (sqm <= 10) ? 147000 : 160000;
     total -= motorPrice;
-    lines.push(`Կոմպլեկտ - ${(complect-motorPrice).toLocaleString()} AMD`);
+    lines.push(`● Կոմպլեկտ (5 սեկցիա) - ${(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
   } else {
-    lines.push(`Կոմպլեկտ - ${(complect).toLocaleString()} AMD`);
+    lines.push(`● Կոմպլեկտ (5 սեկցիա) - ${(complect).toLocaleString()}&nbsp;AMD`);
   }
 
 // height
@@ -209,9 +211,9 @@ function calc() {
     } else {
       total+= Math.ceil(panelsDifference)*panelPrice * w / 6;
       if(Math.ceil(panelsDifference) !== 0) {
-        lines.push(`Լրացուցիչ պանել (քանակ և գին) <br>
+        lines.push(`● Լրացուցիչ սեկցիա <br>
           ${Math.ceil(panelsDifference)} հատ ${w} մետր պանել - 
-          ${parseInt(Math.ceil(panelsDifference) * panelPrice * w / 6)}
+          ${parseInt(Math.ceil(panelsDifference) * panelPrice * w / 6)}&nbsp;AMD
           `);
       }
       // cuts
@@ -231,15 +233,20 @@ function calc() {
   if (wMatched&&hMatched) {
   } else {
     total += assembly;
-    if(assembly)lines.push("Կտրում - " + assembly/1000 + ",000 AMD");
+    if(assembly)lines.push("● Կտրում - " + assembly/1000 + ",000&nbsp;AMD");
   }
 
     if (door) {
     total += passingDoor;
-    lines.push("Դռնակ / կալիտկա - 200,000 AMD");
+    lines.push("● Դռնակ / կալիտկա - 200,000&nbsp;AMD");
   }
+//installation
+  if (install) {
+    total+= 150000;
+    lines.push("● Տեղադրում - 150,000&nbsp;AMD");
+  } 
 
-  // sqm price (without door)
+  // sqm price
   const sqmPrice = Math.round(total / sqm);
 
   const badge = `
