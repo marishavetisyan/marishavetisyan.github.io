@@ -126,7 +126,7 @@ button {
   font-size: 20px;
 }
 
-.result {
+.birka {
   margin-top: 14px;
   font-size: 20px;
   line-height: 1.7;
@@ -138,8 +138,8 @@ button {
   position: absolute;
   bottom: 14px;
   right: 14px;
-  background: rgba(255, 122, 0, 0.95);
-  color: white;
+  background: rgb(255 225 197);
+  color: #626262;
   padding: 10px 12px;
   border-radius: 12px;
   font-size: 19px;
@@ -225,13 +225,15 @@ button {
     <div style="margin-top:10px;">
       <label style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
         Տեղադրում -
-        <input type="checkbox" id="install" style="transform: scale(1.5);">
+        <input type="checkbox" id="install" style="transform: scale(1.5);" onclick="validateFrame()">
       </label>
     </div>
 
+    <div style="margin-top:10px;" id="frameContainer"></div>
+
     <button onclick="calc()">Հաշվել</button>
 
-    <div class="result" id="res"></div>
+    <div class="birka" id="sqm"></div>
 
   </div>
 
@@ -252,11 +254,19 @@ const wVal = document.getElementById('wVal');
 const h = document.getElementById('h');
 const hVal = document.getElementById('hVal');
 
+const install = document.getElementById("install").checked;
+
+function clearOldCost() {
+  document.getElementById("sqm").innerHTML = "";
+}
+
 function syncW(val){
+    clearOldCost();
     wVal.textContent = Number(val).toFixed(1);
   }
 
 function changeW(delta){
+    clearOldCost();
     let newValue = parseFloat(w.value) + delta;
 
     // սահմանների պահպանում
@@ -267,10 +277,12 @@ function changeW(delta){
 }
 
 function syncH(val){
+    clearOldCost();
     hVal.textContent = Number(val).toFixed(1);
   }
 
 function changeH(delta){
+    clearOldCost();
     let newValue = parseFloat(h.value) + delta;
 
     // սահմանների պահպանում
@@ -280,6 +292,16 @@ function changeH(delta){
     syncH(newValue);
 }
 
+function validateFrame() {
+  let installNeeded = document.getElementById("install").checked;
+  document.getElementById("frameContainer").innerHTML = installNeeded ? `
+        <label style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
+          Մետաղական կարկաս - 
+          <input type="checkbox" id="frame" style="transform: scale(1.5);">
+        </label>
+    ` : ""; 
+}
+
 function calc() {
 
   const w = parseFloat(document.getElementById("w").value);
@@ -287,7 +309,7 @@ function calc() {
 
   const auto = document.getElementById("auto").checked;
   const door = document.getElementById("door").checked;
-  const install = document.getElementById("install").checked;
+  const frame = document.getElementById("frame") ? document.getElementById("frame").checked : false;
 
   let wSelected = products.find(p => p.w === w);
   let hSelected = stdh === h;
@@ -299,7 +321,7 @@ function calc() {
   if (!wSelected) {
     wSelected = products.find(p => p.w >= w);
     if (!wSelected) {
-      document.getElementById("res").innerHTML =
+      document.getElementById("sqm").innerHTML =
         "Տվյալ լայնության համար անհրաժեշտ է անհատական հաշվարկ";
       return;
     } else {
@@ -329,7 +351,7 @@ function calc() {
     let panelsDifference = panelsCount - 5;
     
     if (panelsDifference>2||panelsDifference<-1) {
-      document.getElementById("res").innerHTML =
+      document.getElementById("sqm").innerHTML =
         "Տվյալ բարձրության համար անհրաժեշտ է անհատական հաշվարկ";
       return;
     } else {
@@ -365,9 +387,17 @@ function calc() {
     if(assembly)lines.push("● Հավաքում - " + assembly/1000 + ",000&nbsp;AMD");
   }
 //installation
+  const install = document.getElementById("install").checked;
   if (install) {
-    total+= 150000;
-    lines.push("● Տեղադրում - 150,000&nbsp;AMD");
+    total+= 100000;
+    lines.push("● Տեղադրում - 100,000&nbsp;AMD");
+  }
+//frame
+  if (frame) {
+    let framePrice = 50000;
+    if(w>4.4) framePrice+= 25000;
+    total += framePrice;
+    lines.push("● Մետաղական կարկաս - " + framePrice/1000 + ",000&nbsp;AMD");
   } 
 
   // sqm price
@@ -378,8 +408,7 @@ function calc() {
       ${sqmPrice.toLocaleString()} AMD / մ²
     </div>
   `;
-
-  let html = `
+let html = `
     <div style="margin-bottom:10px;font-weight:bold;color:#ff7a00;">
       Արժեքը՝ <br>
     </div>
@@ -391,7 +420,7 @@ function calc() {
   </div>`;
   html += badge;
 
-  document.getElementById("res").innerHTML = html;
+  document.getElementById("sqm").innerHTML = html;
 }
 
 </script>
