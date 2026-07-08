@@ -22,7 +22,11 @@ img {
     text-align: center;
 }
 
-@media (max-width: 650px) {
+.warning {
+      font-size: 10pt;
+    }
+
+@media (max-width: 750px) {
     .container {
         flex-direction: column;
         gap: 30px;
@@ -247,7 +251,9 @@ const products = [
   { w: 3.2, price: 600000 },
   { w: 3.7, price: 660000 },
   { w: 4.2, price: 760000 },
-  { w: 4.5, price: 793000 }
+  { w: 4.5, price: 793000 },
+  { w: 5, price: 893000 },
+  { w: 6, price: 993000 }
 ];
 const stdh = 2.5;
 
@@ -340,9 +346,9 @@ function calc() {
   if (!auto) {
     const motorPrice = (sqm <= 10) ? 147000 : 160000;
     total -= motorPrice;
-    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5)" + " - "+(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5), 5 հատ 50սմ սեկցիա" + " - "+(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
   } else {
-    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5)" + " - "+(complect).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5), 5 հատ 50սմ սեկցիա" + " - "+(complect).toLocaleString()}&nbsp;AMD`);
   }
 
 // height
@@ -360,7 +366,7 @@ function calc() {
       total+= Math.ceil(panelsDifference)*panelPrice * w / 6;
       if(Math.ceil(panelsDifference) !== 0) {
         lines.push(`● Լրացուցիչ սեկցիաներ <br>
-          ${Math.ceil(panelsDifference)} հատ ${w}x0.5մ սեկցիա - 
+          ${Math.ceil(panelsDifference)} հատ ${Math.round(w*100)}x50սմ սեկցիա - 
           ${parseInt(Math.ceil(panelsDifference) * panelPrice * w / 6)}&nbsp;AMD
           `);
       }
@@ -391,13 +397,15 @@ function calc() {
 //installation
   const install = document.getElementById("install").checked;
   if (install) {
-    total+= 100000;
-    lines.push("● Տեղադրում - 100,000&nbsp;AMD");
+    let i = 100000;
+    if((sqm>10)) i += 50000;
+    total+= i;
+    lines.push("● Տեղադրում - " + i/1000 + ",000&nbsp;AMD");
   }
 //frame
   if (frame) {
     let framePrice = 50000;
-    if(w>4.4) framePrice+= 25000;
+    if(sqm>10) framePrice+= 25000;
     total += framePrice;
     lines.push("● Մետաղական կարկաս - " + framePrice/1000 + ",000&nbsp;AMD");
   } 
@@ -416,10 +424,12 @@ let html = `
     </div>
   `;
 
+  lines.push()
   html += lines.map(l => `<div>${l}</div>`).join("");
   html += ` <div style="margin-bottom:10px;font-weight:bold;color:#ff7a00;">
   Ընդհանուր - ${total.toLocaleString()} AMD
   </div>`;
+  html += "<div class='warning'>Չափագրումից հետո արժեքը կարող է փոխվել մինչև +&nbsp;/&nbsp;−&nbsp;50.000&nbsp;դրամ</div>";
   html += badge;
 
   document.getElementById("sqm").innerHTML = html;
