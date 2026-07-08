@@ -256,17 +256,17 @@ const hVal = document.getElementById('hVal');
 
 const install = document.getElementById("install").checked;
 
-function clearOldCost() {
-  document.getElementById("sqm").innerHTML = "";
+function makeOldCost(val=0.3) {
+  document.getElementById("sqm").style.opacity = val;
 }
 
 function syncW(val){
-    clearOldCost();
+    makeOldCost();
     wVal.textContent = Number(val).toFixed(1);
   }
 
 function changeW(delta){
-    clearOldCost();
+    makeOldCost();
     let newValue = parseFloat(w.value) + delta;
 
     // սահմանների պահպանում
@@ -277,12 +277,12 @@ function changeW(delta){
 }
 
 function syncH(val){
-    clearOldCost();
+    makeOldCost();
     hVal.textContent = Number(val).toFixed(1);
   }
 
 function changeH(delta){
-    clearOldCost();
+    makeOldCost();
     let newValue = parseFloat(h.value) + delta;
 
     // սահմանների պահպանում
@@ -338,9 +338,9 @@ function calc() {
   if (!auto) {
     const motorPrice = (sqm <= 10) ? 147000 : 160000;
     total -= motorPrice;
-    lines.push(`● Կոմպլեկտ  - ${(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5)" + " - "+(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
   } else {
-    lines.push(`● Կոմպլեկտ - ${(complect).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5)" + " - "+(complect).toLocaleString()}&nbsp;AMD`);
   }
 
 // height
@@ -421,6 +421,7 @@ let html = `
   html += badge;
 
   document.getElementById("sqm").innerHTML = html;
+  makeOldCost(1);
 }
 
 </script>
