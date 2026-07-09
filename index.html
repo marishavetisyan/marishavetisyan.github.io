@@ -241,9 +241,24 @@ button {
 
   </div>
 </div>
-  <div style="text-align: center; margin-bottom: 50px;">
-    Հարցերի դեպքում զանգահարել 033 113 100
-  </div>
+<a id="order" href="https://docs.google.com/forms/d/e/1FAIpQLSeBNGDqF-GJvDmMKmslU4ZAtGvtgqbIj5WjyQndjuQBDQv8Ww/viewform?usp=publish-editor"
+  target="_blank"
+  style="
+    pointer-events: none;
+    opacity: 0.3;
+    display: block;
+    width: 50%;
+    margin: 0 auto 50px;
+    padding: 12px;
+    background: #ff7a00;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+  ">
+  Պատվիրել չափագրում
+</a>
 
 <script>
 
@@ -252,7 +267,7 @@ const products = [
   { w: 3.7, price: 660000 },
   { w: 4.2, price: 760000 },
   { w: 4.5, price: 793000 },
-  { w: 5, price: 893000 },
+  { w: 5.1, price: 893000 },
   { w: 6, price: 993000 }
 ];
 const stdh = 2.5;
@@ -266,6 +281,12 @@ const install = document.getElementById("install").checked;
 
 function makeOldCost(val=0.3) {
   document.getElementById("sqm").style.opacity = val;
+  document.getElementById("order").style.opacity = val;
+  if(val > 0.2 && val < 0.4 ) {
+    document.getElementById("order").style.pointerEvents = "none";
+  } else {
+    document.getElementById("order").style.pointerEvents = "auto";
+  }
 }
 
 function syncW(val){
