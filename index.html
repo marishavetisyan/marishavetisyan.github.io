@@ -142,8 +142,8 @@ button {
   position: absolute;
   bottom: 14px;
   right: 14px;
-  background: rgb(255 225 197);
-  color: #626262;
+  background: rgb(265 255 248);
+  color: #ff7a00;
   padding: 10px 12px;
   border-radius: 12px;
   font-size: 19px;
@@ -346,9 +346,9 @@ function calc() {
   if (!auto) {
     const motorPrice = (sqm <= 10) ? 147000 : 160000;
     total -= motorPrice;
-    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5), 5 հատ 50սմ սեկցիա" + " - "+(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Ստանդարտ չափ ${"(" +wSelected.w + "x2.5) <br> 5 հատ " + Math.round(wSelected.w*100) + "x50սմ սեկցիա" + " - "+(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
   } else {
-    lines.push(`● Կոմպլեկտ ${"(" +wSelected.w + "x2.5), 5 հատ 50սմ սեկցիա" + " - "+(complect).toLocaleString()}&nbsp;AMD`);
+    lines.push(`● Ստանդարտ չափ ${"(" +wSelected.w + "x2.5) <br> 5 հատ " + Math.round(wSelected.w*100) + "x50սմ սեկցիա" + " - "+(complect).toLocaleString()}&nbsp;AMD`);
   }
 
 // height
@@ -363,11 +363,11 @@ function calc() {
         "Տվյալ բարձրության համար անհրաժեշտ է անհատական հաշվարկ";
       return;
     } else {
-      total+= Math.ceil(panelsDifference)*panelPrice * w / 6;
+      total+= Math.ceil(panelsDifference)*Math.round(panelPrice * w / 1000 / 6)*1000;
       if(Math.ceil(panelsDifference) !== 0) {
         lines.push(`● Լրացուցիչ սեկցիաներ <br>
           ${Math.ceil(panelsDifference)} հատ ${Math.round(w*100)}x50սմ սեկցիա - 
-          ${parseInt(Math.ceil(panelsDifference) * panelPrice * w / 6)}&nbsp;AMD
+          ${parseInt(Math.ceil(panelsDifference) * Math.round(panelPrice * w / 1000 / 6))},000&nbsp;AMD
           `);
       }
       // cuts
@@ -392,7 +392,7 @@ function calc() {
   if (wMatched&&hMatched) {
   } else {
     total += assembly;
-    if(assembly)lines.push("● Հավաքում - " + assembly/1000 + ",000&nbsp;AMD");
+    if(assembly)lines.push("● Կտրում, հավաքում - " + assembly/1000 + ",000&nbsp;AMD");
   }
 //installation
   const install = document.getElementById("install").checked;
@@ -415,7 +415,7 @@ function calc() {
 
   const badge = `
     <div class="sqm-badge">
-      ${sqmPrice.toLocaleString()} AMD / մ²
+      ${sqmPrice.toLocaleString()} դրամ / մ²
     </div>
   `;
 let html = `
@@ -429,7 +429,9 @@ let html = `
   html += ` <div style="margin-bottom:10px;font-weight:bold;color:#ff7a00;">
   Ընդհանուր - ${total.toLocaleString()} AMD
   </div>`;
-  html += "<div class='warning'>Չափագրումից հետո արժեքը կարող է փոխվել մինչև +&nbsp;/&nbsp;−&nbsp;50.000&nbsp;դրամ</div>";
+  html += "<div class='warning'>*Արժեքը չի ներառում ԱԱՀ</div>";
+  html += "<div class='warning'>*Չափագրումից հետո պատվերը չեղարկելու դեպքում չափագրման արժեքը (20.000 դրամ) ենթակա է վճարման</div>";
+  html += "<div class='warning'>*Չափագրման ժամանակ դարպասի արժեքը կարող է փոխվել մինչև +&nbsp;/&nbsp;−&nbsp;50.000&nbsp;դրամ</div>";
   html += badge;
 
   document.getElementById("sqm").innerHTML = html;
