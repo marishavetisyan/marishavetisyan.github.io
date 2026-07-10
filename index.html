@@ -231,27 +231,32 @@ button {
 </div>
 
     <div style="margin-top:10px;">
-      <label style="display:inline-flex; align-items:center; gap:6px;">
+      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px;">
         Հեռակառավարում -
-        <input type="checkbox" id="auto" checked style="transform: scale(1.5);">
+        <input type="checkbox" id="auto" checked style="transform: scale(1.5);" ">
       </label>
     </div>
 
     <div style="margin-top:10px; ">
-      <label style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
+      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
         Դռնակ / կալիտկա -
         <input type="checkbox" id="door" style="transform: scale(1.5);">
       </label>
     </div>
 
     <div style="margin-top:10px;">
-      <label style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
+      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
         Տեղադրում -
-        <input type="checkbox" id="install" style="transform: scale(1.5);" onclick="validateFrame()">
+        <input type="checkbox" id="install" checked style="transform: scale(1.5);" onclick="validateFrame()">
       </label>
     </div>
 
-    <div style="margin-top:10px;" id="frameContainer"></div>
+    <div style="margin-top:10px;" id="frameContainer">
+      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
+        Մետաղական կարկաս - 
+        <input type="checkbox" id="frame" style="transform: scale(1.5);">
+      </label>
+    </div>
 
     <button onclick="calc()">Հաշվել</button>
 
@@ -289,23 +294,23 @@ const hVal = document.getElementById('hVal');
 
 const install = document.getElementById("install").checked;
 
-function makeOldCost(val=0.3) {
-  document.getElementById("sqm").style.opacity = val;
-  document.getElementById("order").style.opacity = val;
-  if(val > 0.2 && val < 0.4 ) {
-    document.getElementById("order").style.pointerEvents = "none";
-  } else {
-    document.getElementById("order").style.pointerEvents = "auto";
-  }
+function activateOrder(a = true) {
+  document.getElementById("order").style.opacity = a ? 1 : 0.3;
+  document.getElementById("order").style.pointerEvents = a ? "auto" : "none";
+}
+
+function deactivateOldCost() {
+  document.getElementById("sqm").style.opacity = .3;
+  activateOrder(false);
 }
 
 function syncW(val){
-    makeOldCost();
+    deactivateOldCost();
     wVal.textContent = Number(val).toFixed(1);
   }
 
 function changeW(delta){
-    makeOldCost();
+    deactivateOldCost();
     let newValue = parseFloat(w.value) + delta;
 
     // սահմանների պահպանում
@@ -316,12 +321,12 @@ function changeW(delta){
 }
 
 function syncH(val){
-    makeOldCost();
+    deactivateOldCost();
     hVal.textContent = Number(val).toFixed(1);
   }
 
 function changeH(delta){
-    makeOldCost();
+    deactivateOldCost();
     let newValue = parseFloat(h.value) + delta;
 
     // սահմանների պահպանում
@@ -334,7 +339,7 @@ function changeH(delta){
 function validateFrame() {
   let installNeeded = document.getElementById("install").checked;
   document.getElementById("frameContainer").innerHTML = installNeeded ? `
-        <label style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
+        <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
           Մետաղական կարկաս - 
           <input type="checkbox" id="frame" style="transform: scale(1.5);">
         </label>
@@ -432,6 +437,8 @@ function calc() {
     if((sqm>10)) i += 50000;
     total+= i;
     lines.push("● Տեղադրում - " + i/1000 + ",000&nbsp;AMD");
+  } else {
+    activateOrder(false);
   }
 //frame
   if (frame) {
@@ -466,7 +473,8 @@ let html = `
   html += badge;
 
   document.getElementById("sqm").innerHTML = html;
-  makeOldCost(1);
+  document.getElementById("sqm").style.opacity = 1;
+  activateOrder(install);
 }
 
 </script>
