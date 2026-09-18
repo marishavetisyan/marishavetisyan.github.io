@@ -3,12 +3,87 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Դարպասի հաշվիչ</title>
+<title>Դարպասի գնի հաշվիչ | Master Gate</title>
+<meta name="description" content="Հաշվեք ձեր դարպասի արժեքը 30 վայրկյանում։ Master Gate դարպասներ, չափագրում, տեղադրում, հեռակառավարում և մետաղական կարկաս Հայաստանում։">
+<meta name="keywords" content="դարպաս, դարպասի գին, ավտոմատ դարպաս, դարպասի հաշվիչ, Master Gate, դարպաս Երևան, դարպասի տեղադրում">
+<meta name="author" content="Master Gate">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#ff7a00">
+<link rel="canonical" href="__PUBLIC_URL__/">
+<link rel="icon" href="/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="/logo.png">
+<meta property="og:locale" content="hy_AM">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Master Gate">
+<meta property="og:title" content="Դարպասի գնի հաշվիչ | Master Gate">
+<meta property="og:description" content="Հաշվեք ձեր դարպասի արժեքը 30 վայրկյանում և պատվիրեք չափագրում Master Gate-ում։">
+<meta property="og:url" content="__PUBLIC_URL__/">
+<meta property="og:image" content="__PUBLIC_URL__/logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Master Gate logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Դարպասի գնի հաշվիչ | Master Gate">
+<meta name="twitter:description" content="Հաշվեք ձեր դարպասի արժեքը 30 վայրկյանում և պատվիրեք չափագրում։">
+<meta name="twitter:image" content="__PUBLIC_URL__/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Master Gate",
+  "url": "__PUBLIC_URL__/",
+  "logo": "__PUBLIC_URL__/logo.png",
+  "image": "__PUBLIC_URL__/logo.png",
+  "telephone": "+37441394449",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Թբիլիսյան 29/24",
+    "addressLocality": "Երևան",
+    "addressCountry": "AM"
+  },
+  "areaServed": "Armenia",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/master_gate/",
+    "https://www.facebook.com/mastergatedoors/"
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "Դարպասների պատրաստում և տեղադրում"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Master Gate",
+  "url": "__PUBLIC_URL__/",
+  "potentialAction": {
+    "@type": "Action",
+    "name": "Դարպասի արժեքի հաշվարկ"
+  }
+}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.1.1/dist/css/intlTelInput.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHD1F4NF38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-BHD1F4NF38");
+</script>
 
 <style>
-img {
+* {
+  box-sizing: border-box;
+}
+
+.form-logo img {
   border-radius: 19%;
-  border-bottom: 6px solid #ff7a00;
   box-shadow: 0 -1px 20px rgba(0,0,0,0.08);
 }
 .container {
@@ -16,10 +91,6 @@ img {
     justify-content: center;
     align-items: center;
     gap: 80px;
-}
-
-#logo {
-    text-align: center;
 }
 
 .warning {
@@ -41,6 +112,123 @@ a {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+.phone-link {
+  pointer-events: auto;
+  opacity: 1;
+  display: inline;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #ff7a00;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.extra-phone-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 8px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.contact-block {
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.social-link {
+  pointer-events: auto;
+  opacity: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  background: #ff7a00;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255, 122, 0, 0.28);
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+#order {
+  pointer-events: none;
+  opacity: 0.3;
+  display: block;
+  width: 100%;
+  margin: 14px 0 0;
+  padding: 12px;
+  background: #ff7a00;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator-shell {
+  width: min(1260px, 100%);
+  min-width: 207px;
+}
+
+#order.is-active {
+  animation: orderBreath 1.8s ease-in-out infinite;
+  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.34);
+}
+
+#calculate.is-stale {
+  animation: calculateHeartbeat 1.7s ease-in-out infinite;
+  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.28);
+}
+
+#calculate.is-ready {
+  background: #b6b6b6;
+  box-shadow: none;
+}
+
+@keyframes orderBreath {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(255, 122, 0, 0.28);
+  }
+  50% {
+    transform: scale(1.025);
+    box-shadow: 0 12px 32px rgba(255, 122, 0, 0.44);
+  }
+}
+
+@keyframes calculateHeartbeat {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(255, 122, 0, 0.22);
+  }
+  45% {
+    transform: scale(1.018);
+    box-shadow: 0 12px 30px rgba(255, 122, 0, 0.38);
+  }
+}
+
 @media (max-width: 750px) {
     .container {
         flex-direction: column;
@@ -48,10 +236,6 @@ a {
     }
     a{
       margin: 0 auto 10px;
-    }
-
-    #logo {
-        order: -1;      /* logo on top */
     }
 
     .card {
@@ -71,6 +255,10 @@ body {
   color: #222;
 }
 
+body.modal-locked {
+  overflow: hidden;
+}
+
 .minus  {
   margin-left: auto;
   
@@ -82,7 +270,7 @@ body {
 .container {
   display: flex;
   gap: 40px;
-  padding: 60px 10%;
+  padding: 60px 2.5%;
   align-items: center;
 }
 
@@ -97,30 +285,141 @@ body {
 }
 
 .card {
-  width: 90%;
-  min-width: 207px;
+  width: 100%;
   background: #fff;
   padding: 22px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   border-top: 6px solid #ff7a00;
   position: relative;
-  
 }
 
-.row {
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-logo {
+  flex: 0 0 auto;
+}
+
+.form-logo img {
+  width: 110px;
+  display: block;
+}
+
+.container .form-title {
+  margin: 0;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   padding: 0 12px;
 }
 
-.row label {
+.size-control {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 93%;
+  min-width: 0;
+  margin-bottom: 20px;
 }
 
-.row input[type="range"] {
+.size-control input[type="range"] {
   width: 100%;
+}
+
+.size-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.step-buttons {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.step-buttons button {
+  width: 40px;
+  min-width: 40px;
+  margin: 0;
+  padding: 8px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.option-item {
+  min-width: 0;
+  position: relative;
+}
+
+.option-item label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 52px;
+  padding: 10px 72px 10px 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.option-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.option-text {
+  display: inline-block;
+}
+
+.option-info {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  line-height: 0;
+  z-index: 2;
+}
+
+.option-info img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.option-item input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0;
+  transform: scale(1.25);
 }
 
 label {
@@ -136,6 +435,60 @@ input {
   font-size: 20px;
 }
 
+input[type="checkbox"],
+input[type="range"] {
+  accent-color: #ff7a00;
+}
+
+input[type="range"] {
+  --range-progress: 0%;
+  height: 6px;
+  border: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ff7a00 0%, #ff7a00 var(--range-progress), #fff 0%, #fff 100%);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px #ffd8b8;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: transparent;
+  border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: #ff7a00;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: transparent;
+  border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 6px;
+  background: #ff7a00;
+  border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #ff7a00;
+  cursor: pointer;
+}
+
 button {
   width: 100%;
   margin-top: 12px;
@@ -146,20 +499,593 @@ button {
   color: white;
   cursor: pointer;
   font-size: 20px;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.45);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: min(460px, 100%);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.24);
+  padding: 24px;
+  transform: translateY(12px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.modal.open .modal-card {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal-card h2 {
+  margin: 0 0 16px;
+  color: #ff7a00;
+}
+
+.modal-field {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.modal-field input,
+.modal-field textarea,
+.modal-field select {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.modal-field input[readonly] {
+  color: #555;
+  background: #f3f3f3;
+  cursor: not-allowed;
+}
+
+.address-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.address-select-grid .modal-field {
+  min-width: 0;
+}
+
+.address-select-grid .modal-field > label {
+  font-size: 16px;
+}
+
+.community-picker {
+  position: relative;
+}
+
+.community-picker #addressCommunity {
+  display: none;
+}
+
+.community-search {
+  padding-inline-end: 38px !important;
+}
+
+.community-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  max-height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-color: #ffb36a #fff;
+  scrollbar-width: thin;
+  padding: 6px;
+  background: #fff !important;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+
+.community-options::-webkit-scrollbar {
+  width: 9px;
+}
+
+.community-options::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 999px;
+}
+
+.community-options::-webkit-scrollbar-thumb {
+  background: #ffb36a;
+  border: 2px solid #fff;
+  border-radius: 999px;
+}
+
+.community-options[hidden] {
+  display: none;
+}
+
+.community-option {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  color: #222;
+  border: 0;
+  border-radius: 7px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.community-option:hover,
+.community-option.is-highlighted {
+  background: #fff0e3;
+  color: #9a4d00;
+}
+
+.community-empty {
+  padding: 10px;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+#installationAddressFields[hidden],
+#pickupAddressField[hidden],
+#paymentProviderField[hidden],
+#orderPrepaymentSummary[hidden] {
+  display: none;
+}
+
+.payment-provider-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.payment-provider-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid #ffd6b3;
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.payment-provider-option input {
+  width: auto;
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.payment-provider-option img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.payment-provider-option.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.order-total-summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 14px 0 20px;
+  padding: 12px 14px;
+  border: 1px solid #ffd6b3;
+  border-radius: 10px;
+  background: #fff7f0;
+}
+
+.order-total-summary span {
+  color: #555;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.prepayment-promo-text .prepayment-discount-word {
+  color: #f57c00;
+  font-weight: 800;
+}
+
+.order-total-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.order-total-values {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  text-align: right;
+}
+
+.order-total-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.order-total-line span {
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-total-summary strong {
+  color: #111;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.order-total-summary strong.is-discounted {
+  color: #198754;
+}
+
+.order-total-vat {
+  color: #777;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.order-total-old {
+  color: #c62828;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: line-through;
+}
+
+.order-total-discount {
+  color: #198754;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+#orderModal .modal-card {
+  background: #fff;
+  background-clip: padding-box;
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #ffb36a #fff;
+}
+
+.modal-field textarea {
+  height: 48px;
+  min-height: 48px;
+  max-height: 80px;
+  resize: none;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.phone-input .iti {
+  flex: 1 1 auto;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.phone-input input[type="tel"] {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.phone-input input[type="tel"]:focus {
+  outline: none;
+}
+
+.phone-input .iti:focus-within {
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.12);
+}
+
+.phone-input .iti__selected-country {
+  height: 100%;
+  border-radius: 9px 0 0 9px;
+  background: transparent;
+}
+
+.phone-input .iti__selected-country-primary {
+  border-radius: inherit;
+}
+
+.phone-input .iti__search-input {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  padding-inline-start: 38px;
+  padding-inline-end: 12px;
+  box-sizing: border-box;
+}
+
+.phone-input .iti__search-icon {
+  inset-inline-start: 12px;
+  inset-inline-end: auto;
+}
+
+.phone-input .iti__dropdown-content {
+  left: 0 !important;
+  right: 0 !important;
+  top: calc(100% + 6px) !important;
+  bottom: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.iti__dropdown-content {
+  max-width: calc(100vw - 24px) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.phone-input .iti__country-list {
+  max-height: 176px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.iti__country-list {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+
+.phone-input .iti__country,
+.iti__country {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+}
+
+.iti__flag-box {
+  flex: 0 0 auto;
+}
+
+.phone-input .iti__country-name,
+.iti__country-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.phone-input .iti__dial-code,
+.iti__dial-code {
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.phone-input .iti--fullscreen-popup,
+.phone-input .iti--fullscreen-popup .iti__country-selector {
+  position: absolute;
+  inset: auto;
+  width: auto;
+  height: auto;
+  max-height: none;
+  background: transparent;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.modal-actions button {
+  margin-top: 0;
+}
+
+.secondary-button {
+  background: #666;
+}
+
+.form-status {
+  min-height: 22px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.form-status.is-success {
+  color: #198754;
+}
+
+.form-status.is-error {
+  color: #c62828;
+}
+
+.gallery-card {
+  width: min(760px, 100%);
+}
+
+.gallery-frame {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gallery-stage {
+  flex: 1 1 auto;
+  min-height: 260px;
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff7f2;
+  border-radius: 12px;
+}
+
+.gallery-stage img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 12px;
+  border: 0;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.gallery-stage.has-videos {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.gallery-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.gallery-nav {
+  width: 44px;
+  min-width: 44px;
+  margin: 0;
+  padding: 10px;
+}
+
+.gallery-nav.is-hidden {
+  display: none;
+}
+
+.gallery-empty {
+  color: #666;
+  text-align: center;
+  padding: 24px;
+}
+
+.gallery-counter {
+  margin-top: 12px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
 }
 
 .birka {
   margin-top: 14px;
   font-size: 20px;
   line-height: 1.7;
-  padding-bottom: 60px;
+  padding-bottom: 16px;
+}
+
+.price-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+}
+
+.price-label {
+  min-width: 0;
+}
+
+.price-fill {
+  flex: 1 1 auto;
+  min-width: 32px;
+  border-bottom: 2px dotted #cfcfcf;
+  transform: translateY(-0.45em);
+}
+
+.price-amount {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price-total {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ff7a00;
 }
 
 /* PRICE/M² BADGE */
+.sqm-line {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2px 0 12px;
+}
+
 .sqm-badge {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
+  display: inline-block;
   background: rgb(265 255 248);
   color: #ff7a00;
   padding: 10px 12px;
@@ -169,9 +1095,422 @@ button {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
+.agreements {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.individual-message {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: #fff3e6;
+  color: #9a4d00;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.agreement-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 10px 42px 10px 10px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.agreement-item label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.agreement-item input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: auto;
+  margin: 2px 0 0;
+  transform: scale(1.15);
+}
+
+.agreement-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.agreement-info {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  line-height: 0;
+}
+
+.agreement-info img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.agreement-card {
+  width: min(460px, 100%);
+}
+
+.agreement-text {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.agreement-text {
+  margin-bottom: 14px;
+}
+
+.agreement-text a {
+  pointer-events: auto;
+  opacity: 1;
+  display: inline;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #ff7a00;
+  text-decoration: underline;
+  border-radius: 0;
+  font-weight: 700;
+}
+
+.agreement-points {
+  margin: 10px 0 16px;
+  padding-left: 0;
+  list-style: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.agreement-points-title {
+  margin: 12px 0 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.agreement-points li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.agreement-points li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+.agreement-points li + li {
+  margin-top: 6px;
+}
+
+.agreement-document-link {
+  margin: 12px 0 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
 /* SECTIONS */
 .section {
   padding: 60px 10%;
+}
+
+@media (max-width: 1100px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    padding: 28px 2.5% 24px;
+    gap: 24px;
+  }
+
+  .calculator-shell {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .form-header {
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .form-logo img {
+    width: 76px;
+  }
+
+  .container .form-title {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .size-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .size-control {
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .size-heading {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .step-buttons button {
+    width: 36px;
+    min-width: 36px;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .option-item label {
+    min-height: 46px;
+    font-size: 13px;
+    gap: 6px;
+    padding: 8px 44px 8px 8px;
+  }
+
+  .option-info {
+    right: 8px;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+  }
+
+  .option-info img {
+    width: 18px;
+    height: 18px;
+  }
+
+  button {
+    padding: 11px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  .birka {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-bottom: 10px;
+  }
+
+  .price-row {
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .price-label {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .price-fill {
+    flex: 1 1 auto;
+    min-width: 14px;
+    transform: translateY(-0.45em);
+  }
+
+  .price-amount {
+    flex: 0 0 auto;
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .sqm-line {
+    justify-content: stretch;
+    margin: 8px 0 12px;
+  }
+
+  .sqm-badge {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .warning {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .agreement-item {
+    padding: 9px 38px 9px 9px;
+  }
+
+  .agreement-item label {
+    font-size: 12.5px;
+    line-height: 1.25;
+  }
+
+  .agreement-info {
+    right: 8px;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+  }
+
+  .agreement-info img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .agreement-text,
+  .agreement-points,
+  .agreement-points-title,
+  .agreement-document-link {
+    font-size: 14px;
+  }
+
+  .modal {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 10px 0;
+  }
+
+  .modal-card {
+    width: 95vw;
+    max-width: 95vw;
+    margin: auto;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .modal-card h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .modal-field,
+  .address-select-grid .modal-field > label {
+    font-size: 14px;
+  }
+
+  .modal-field input,
+  .modal-field textarea,
+  .modal-field select {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 9px;
+  }
+
+  .modal-actions button {
+    min-width: 0;
+    padding: 11px 8px;
+    font-size: 15px;
+  }
+
+  .community-options {
+    max-height: min(220px, 35dvh);
+  }
+
+  .contact-block {
+    font-size: 90%;
+    line-height: 1.35;
+    padding: 0 2.5%;
+  }
+
+  .phone-input .iti__dropdown-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .phone-input .iti__country-list {
+    max-height: min(176px, 30dvh);
+  }
+
+  .phone-input .iti__country {
+    min-width: 0;
+  }
+
+  .phone-input .iti__country-name {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 360px) {
+  .card,
+  .modal-card {
+    padding: 14px;
+  }
+
+  .form-logo img {
+    width: 68px;
+  }
+
+  .container .form-title {
+    font-size: 13px;
+  }
+
+  .size-heading {
+    align-items: flex-start;
+    font-size: 15px;
+  }
+
+  .option-item label {
+    font-size: 12.5px;
+  }
+
+  .birka {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 17px;
+  }
 }
 </style>
 </head>
@@ -179,303 +1518,1727 @@ button {
 <body>
 
 <div class="container">
-  <div id="logo">
-    <img style="width:170px;" src="https://marishavetisyan.github.io/logo.png">
-    <p>Հաշվիր քո դարպասի արժեքը 30 վայրկյանում</p>
-  </div>
+  <div class="calculator-shell">
   <div class="card">
+    <div class="form-header">
+      <div class="form-logo">
+        <img src="/logo.png" alt="Master Gate">
+      </div>
+      <h1 class="form-title">Հաշվիր քո դարպասի արժեքը 30 վայրկյանում</h1>
+    </div>
 
-    <div class="row">
-
-  <label style="display:block; margin-bottom:20px;">
-
-    <div style="display:flex; align-items:center; justify-content:space-between;">
-      
-      <span>
-        Լայնություն (մ): <span id="wVal">3.2</span>
-      </span>
-
-      <div style="display:flex; gap:6px;">
-        <button class="minus" type="button" onclick="changeW(-0.1)">−</button>
-        <button class="plus" type="button" onclick="changeW(0.1)">+</button>
+    <div class="size-grid">
+      <div class="size-control">
+        <div class="size-heading">
+          <span>Լայնություն (մ): <span id="wVal">3.2</span></span>
+          <div class="step-buttons">
+            <button class="minus" type="button" onclick="changeW(-0.01)">−</button>
+            <button class="plus" type="button" onclick="changeW(0.01)">+</button>
+          </div>
+        </div>
+        <input type="range" id="w" min="2" max="6" step="0.01" value="3.2" oninput="syncW(this.value)">
       </div>
 
+      <div class="size-control">
+        <div class="size-heading">
+          <span>Բարձրություն (մ): <span id="hVal">2.5</span></span>
+          <div class="step-buttons">
+            <button class="minus" type="button" onclick="changeH(-0.01)">−</button>
+            <button class="plus" type="button" onclick="changeH(0.01)">+</button>
+          </div>
+        </div>
+        <input type="range" id="h" min="2" max="4" step="0.01" value="2.5" oninput="syncH(this.value)">
+      </div>
     </div>
 
-    <input type="range" id="w" min="2" max="6" step="0.1" value="3.2"
-      oninput="syncW(this.value)" style="width:100%; margin-top:8px;">
-
-  </label>
-
-
-  <label style="display:block; margin-bottom:20px;">
-
-    <div style="display:flex; align-items:center; justify-content:space-between;">
-      
-      <span>
-        Բարձրություն (մ): <span id="hVal">2.5</span>
-      </span>
-
-      <div style="display:flex; gap:6px;">
-        <button class="minus" type="button" onclick="changeH(-0.1)">−</button>
-        <button class="plus" type="button" onclick="changeH(0.1)">+</button>
+    <div class="options-grid">
+      <div class="option-item">
+        <label>
+          <input type="checkbox" id="auto" checked onchange="makeOldCost()">
+          <span class="option-text">Հեռակառավարում</span>
+        </label>
+        <button class="option-info" type="button" onclick="openGallery(event, 'auto')" aria-label="Հեռակառավարում նկարներ"><img src="/src/icons/info.svg" alt=""></button>
       </div>
 
+      <div class="option-item">
+        <label>
+          <input type="checkbox" id="door" onchange="makeOldCost()">
+          <span class="option-text">Դռնակ / կալիտկա</span>
+        </label>
+        <button class="option-info" type="button" onclick="openGallery(event, 'door')" aria-label="Դռնակ նկարներ"><img src="/src/icons/info.svg" alt=""></button>
+      </div>
+
+      <div class="option-item">
+        <label>
+          <input type="checkbox" id="install" checked onclick="validateFrame()" onchange="makeOldCost()">
+          <span class="option-text">Տեղադրում</span>
+        </label>
+        <button class="option-info" type="button" onclick="openGallery(event, 'install')" aria-label="Տեղադրում նկարներ"><img src="/src/icons/info.svg" alt=""></button>
+      </div>
+
+      <div class="option-item" id="frameContainer"></div>
     </div>
 
-    <input type="range" id="h" min="2" max="4" step="0.1" value="2.5"
-      oninput="syncH(this.value)" style="width:100%; margin-top:8px;">
-
-  </label>
-
-</div>
-
-    <div style="margin-top:10px;">
-      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px;">
-        Հեռակառավարում -
-        <input type="checkbox" id="auto" checked style="transform: scale(1.5);" ">
-      </label>
-    </div>
-
-    <div style="margin-top:10px; ">
-      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
-        Դռնակ / կալիտկա -
-        <input type="checkbox" id="door" style="transform: scale(1.5);">
-      </label>
-    </div>
-
-    <div style="margin-top:10px;">
-      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
-        Տեղադրում -
-        <input type="checkbox" id="install" checked style="transform: scale(1.5);" onclick="validateFrame()">
-      </label>
-    </div>
-
-    <div style="margin-top:10px;" id="frameContainer">
-      <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
-        Մետաղական կարկաս - 
-        <input type="checkbox" id="frame" style="transform: scale(1.5);">
-      </label>
-    </div>
-
-    <button onclick="calc()">Հաշվել</button>
+    <button id="calculate" type="button" onclick="calc()">Հաշվել</button>
 
     <div class="birka" id="sqm"></div>
 
   </div>
+  <button id="order" type="button" onclick="openOrderPopup()" disabled>
+    Պատվիրել
+  </button>
+  </div>
 </div>
-<a id="order" href="https://docs.google.com/forms/d/e/1FAIpQLSeBNGDqF-GJvDmMKmslU4ZAtGvtgqbIj5WjyQndjuQBDQv8Ww/viewform?usp=publish-editor"
-  target="_blank">
-  Պատվիրել չափագրում
-</a>
-<div style="
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 0;
-  ">
-  Հարցերի դեպքում զանգահարել 033 113 100
+<div class="contact-block">
+  Հարցերի դեպքում զանգահարել
+  <div class="extra-phone-links">
+    <a class="phone-link" href="tel:+37441394449" onclick="trackEvent('phone_click', { location: 'contact_block', phone: '+37441394449' })">+374 41 39 44 49</a>
+    <a class="phone-link" href="tel:+37443394449" onclick="trackEvent('phone_click', { location: 'contact_block', phone: '+37443394449' })">+374 43 39 44 49</a>
+  </div>
+  <div class="social-links">
+    <a class="social-link" href="https://www.instagram.com/master_gate/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="trackEvent('social_click', { network: 'instagram' })">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.7 2.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+      </svg>
+    </a>
+    <a class="social-link" href="https://www.facebook.com/mastergatedoors/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" onclick="trackEvent('social_click', { network: 'facebook' })">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.2-1.5 1.5-1.5h1.7V4.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1V11H8v3h2.7v8h2.8Z"/>
+      </svg>
+    </a>
+    <a class="social-link" href="https://wa.me/37443394449" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onclick="trackEvent('social_click', { network: 'whatsapp', phone: '+37443394449' })">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2.4 22l5.2-1.2A9.8 9.8 0 1 0 12 2Zm0 2a7.8 7.8 0 0 1 6.6 12 7.8 7.8 0 0 1-9.9 2.7l-.4-.2-2.9.7.7-2.8-.2-.4A7.8 7.8 0 0 1 12 4Zm-3.1 3.7c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.4l-1.7-.8c-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2-1.2-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.5-.6-.5h-.5Z"/>
+      </svg>
+    </a>
+    <a class="social-link" href="viber://chat?number=%2B37443394449" aria-label="Viber" onclick="trackEvent('social_click', { network: 'viber', phone: '+37443394449' })">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.1 2.2c1.8 0 3.4.2 4.6.7 1.2.5 2.1 1.3 2.7 2.5.6 1.2.8 2.8.8 4.7 0 1.9-.3 3.5-.8 4.6-.6 1.2-1.5 2-2.8 2.5l-1 .3-3.7 3.5c-.6.5-1.5.1-1.5-.7v-2.7h-.2c-1.8 0-3.4-.2-4.6-.7-1.2-.5-2.1-1.3-2.7-2.5-.6-1.2-.8-2.8-.8-4.7s.3-3.5.8-4.6c.6-1.2 1.5-2 2.7-2.5 1.2-.5 2.7-.7 4.5-.7h2Zm-1.9 2c-1.6 0-2.9.2-3.8.6-.8.3-1.4.9-1.8 1.7-.4.8-.6 2.1-.6 3.7s.2 2.9.6 3.7c.4.8 1 1.4 1.8 1.7.9.4 2.2.6 3.8.6h1.2c.6 0 1 .4 1 1v1l2.1-2c.2-.2.4-.3.7-.3.4-.1.7-.2 1-.3.8-.3 1.4-.9 1.8-1.7.4-.8.6-2.1.6-3.7s-.2-2.9-.6-3.7c-.4-.8-1-1.4-1.8-1.7-.9-.4-2.2-.6-3.8-.6h-2.2Zm5 8.9c.3.2.4.6.2.9-.3.6-.9 1.1-1.6 1.1-.5 0-2.4-.5-4.2-2.3-1.8-1.8-2.3-3.7-2.3-4.2 0-.7.5-1.3 1.1-1.6.3-.2.7-.1.9.2l.8 1.1c.2.3.2.6 0 .9l-.4.5c.2.5.6 1.1 1.2 1.7.6.6 1.2 1 1.7 1.2l.5-.4c.3-.2.6-.2.9 0l1.2.9Zm-3.1-6.8c2.8.2 4.3 1.7 4.5 4.5 0 .4-.2.7-.6.7-.4 0-.7-.2-.7-.6-.2-2.2-1.2-3.2-3.4-3.4-.4 0-.6-.4-.6-.7.1-.4.4-.6.8-.5Zm.1 2.1c1.4.2 2.2.9 2.3 2.3.1.4-.2.7-.6.8-.4 0-.7-.2-.8-.6-.1-.8-.4-1.1-1.2-1.2-.4-.1-.6-.4-.6-.8.1-.3.5-.6.9-.5Z"/>
+      </svg>
+    </a>
+  </div>
 </div>
-<script>
 
-const products = [
-  { w: 3.2, price: 600000 },
-  { w: 3.7, price: 660000 },
-  { w: 4.2, price: 760000 },
-  { w: 4.5, price: 793000 },
-  { w: 5.1, price: 893000 },
-  { w: 6, price: 993000 }
-];
-const stdh = 2.5;
+<div class="modal" id="phoneGateModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="phoneGateTitle">
+    <h2 id="phoneGateTitle">Շարունակելու համար</h2>
+    <form id="phoneGateForm">
+      <label class="modal-field">
+        Մուտքագրեք ձեր հեռախոսահամարը՝ ծառայությունից օգտվելը շարունակելու համար
+        <div class="phone-input">
+          <input id="phoneGateInput" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="33 113 100" required>
+          <input id="phoneGateCountry" name="phoneGateCountry" type="hidden" value="AM">
+        </div>
+      </label>
+      <div class="modal-actions">
+        <button type="submit" id="phoneGateSubmit">Շարունակել</button>
+      </div>
+      <div class="form-status" id="phoneGateStatus"></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="orderModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-label="Պատվիրել">
+    <form id="orderForm">
+      <label class="modal-field">
+        Նախընտրելի կապի միջոց
+        <select id="contactMethod" name="contactMethod" required>
+          <option value="phone">Հեռախոսազանգ</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="viber">Viber</option>
+        </select>
+      </label>
+      <label class="modal-field">
+        <span id="phoneFieldLabel">Ձեր հեռախոսահամարը</span>
+        <div class="phone-input">
+          <input id="customerPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="33 113 100" required>
+          <input id="phoneCountry" name="phoneCountry" type="hidden" value="AM">
+        </div>
+      </label>
+      <label class="modal-field" id="pickupAddressField">
+        Հասցե
+        <input id="customerAddress" name="address" type="text" value="ք. Երևան, Թբիլիսյան 29/24" readonly required>
+      </label>
+      <div id="installationAddressFields" hidden>
+        <div class="address-select-grid">
+          <label class="modal-field">
+            Մարզ
+            <select id="addressRegion" name="addressRegion" disabled required>
+              <option value="">Ընտրեք մարզը</option>
+            </select>
+          </label>
+          <div class="modal-field">
+            <label for="addressCommunitySearch">Համայնք</label>
+            <div class="community-picker" id="communityPicker">
+              <input class="community-search" id="addressCommunitySearch" type="search" placeholder="Որոնել համայնքը" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="addressCommunityList" disabled required>
+              <select id="addressCommunity" name="addressCommunity" aria-hidden="true" tabindex="-1" disabled>
+                <option value="">Ընտրեք համայնքը</option>
+              </select>
+              <div class="community-options" id="addressCommunityList" role="listbox" hidden></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <label class="modal-field">
+        <span class="prepayment-promo-text">Կանխավճար թող անկանխիկ, ստացիր <span class="prepayment-discount-word">զեղչ</span></span>
+        <select id="prepaymentPercent" name="prepaymentPercent" required>
+          <option value="0">0%</option>
+          <option value="10">10%</option>
+          <option value="30">30%</option>
+          <option value="50">50%</option>
+        </select>
+      </label>
+      <div class="modal-field" id="paymentProviderField" hidden>
+        <span>Վճարման եղանակ</span>
+        <div class="payment-provider-options">
+          <label class="payment-provider-option">
+            <input type="checkbox" name="paymentProvider" value="idram">
+            <img src="/src/icons/idram.png" alt="">
+            <span>Իդրամ</span>
+          </label>
+          <label class="payment-provider-option is-disabled">
+            <input type="checkbox" name="paymentProvider" value="card" disabled>
+            <img src="/src/icons/card.png" alt="">
+            <span>Քարտ</span>
+          </label>
+        </div>
+      </div>
+      <div class="order-total-summary" id="orderPrepaymentSummary">
+        <div class="order-total-label">
+          <span>Կանխավճար</span>
+        </div>
+        <div class="order-total-values">
+          <strong id="orderPrepaymentValue">-</strong>
+          <small class="order-total-vat" id="orderPrepaymentVatValue">Ներառյալ ԱԱՀ՝ -</small>
+        </div>
+      </div>
+      <div class="order-total-summary" id="orderTotalSummary">
+        <div class="order-total-label">
+          <span>Արժեք</span>
+        </div>
+        <div class="order-total-values">
+          <span class="order-total-old" id="orderOldPriceValue" hidden>-</span>
+          <div class="order-total-line">
+            <strong id="orderTotalValue">-</strong>
+            <span class="order-total-discount" id="orderDiscountBadge" hidden></span>
+          </div>
+          <small class="order-total-vat" id="orderTotalVatValue">Ներառյալ ԱԱՀ՝ -</small>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="secondary-button" onclick="closeOrderPopup()">Փակել</button>
+        <button type="submit" id="sendOrder">Պատվիրել</button>
+      </div>
+      <div class="form-status" id="formStatus"></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="galleryModal" aria-hidden="true">
+  <div class="modal-card gallery-card" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+    <h2 id="galleryTitle">Նկարներ</h2>
+    <div class="gallery-frame">
+      <button class="gallery-nav" id="galleryPrev" type="button" onclick="changeGalleryImage(-1)" aria-label="Նախորդ">‹</button>
+      <div class="gallery-stage" id="galleryStage"></div>
+      <button class="gallery-nav" id="galleryNext" type="button" onclick="changeGalleryImage(1)" aria-label="Հաջորդ">›</button>
+    </div>
+    <div class="gallery-counter" id="galleryCounter"></div>
+    <div class="modal-actions">
+      <button type="button" class="secondary-button" onclick="closeGallery()">Փակել</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="agreementModal" aria-hidden="true">
+  <div class="modal-card agreement-card" id="agreementCard" role="dialog" aria-modal="true" aria-labelledby="agreementTitle">
+    <h2 id="agreementTitle">Տեղեկություն</h2>
+    <p class="agreement-text" id="agreementText"></p>
+    <div class="modal-actions">
+      <button type="button" class="secondary-button" onclick="closeAgreementInfo()">Համաձայն չեմ</button>
+      <button type="button" id="acceptAgreementButton" onclick="acceptAgreementFromInfo()">Համաձայն եմ</button>
+    </div>
+  </div>
+</div>
+
+<script src="calculator.js"></script>
+<script src="/src/country-names-hy.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.1.1/dist/js/intlTelInputWithUtils.min.js"></script>
+<script>
 
 const w = document.getElementById('w');
 const wVal = document.getElementById('wVal');
 const h = document.getElementById('h');
 const hVal = document.getElementById('hVal');
+let lastCalculation = null;
+let lastLoggedCalculationKey = "";
+let galleryImages = [];
+let galleryIndex = 0;
+let phonePlugin = null;
+let phoneGatePlugin = null;
+let savedPhoneGatePhone = null;
+const pickupAddress = "ք. Երևան, Թբիլիսյան 29/24";
+let armeniaCommunities = {};
+let addressRegionsPromise = null;
+let highlightedCommunityIndex = -1;
+let activeAgreementKey = "";
+let activeAgreementStatusTracked = false;
+const galleryTitles = {
+  auto: "Հեռակառավարում",
+  door: "Դռնակ / կալիտկա",
+  install: "Տեղադրում",
+  frame: "Մետաղական կարկաս"
+};
+const galleryVideos = {
+  auto: [
+    {
+      src: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmastergatedoors%2Fvideos%2F611450201882391%2F&show_text=false&width=734",
+      title: "Հեռակառավարման տեսանյութ"
+    }
+  ],
+  door: [
+    {
+      src: "https://www.youtube.com/embed/OKjOa1QpPXE",
+      title: "Master Gate - սեկցիոնալ հեռակառավարվող դարպասներ"
+    }
+  ],
+  install: [
+    {
+      src: "https://www.youtube.com/embed/zmIz3WgQQwE",
+      title: "Master Gate Հատվածավոր հեռակառավարվող դարպասներ"
+    }
+  ]
+};
+const agreementInfo = {
+  cancel: {
+    title: "Պատվերի չեղարկման պայմաններ",
+    text: "Չափագրումից հետո պատվերը չեղարկելու դեպքում չափագրման արժեքը (20.000 դրամ) ենթակա է վճարման:"
+  },
+  priceChange: {
+    title: "Գնի հնարավոր փոփոխություն",
+    text: "Չափագրման ժամանակ արձանագրված լրացուցիչ կոնստրուկցիոն լուծումների անհրաժեշտության դեպքում դարպասի արժեքը կարող է ավելանալ կամ նվազել մինչև 50.000 դրամ, և այդ պատճառով պատվերը չեղարկելու դեպքում, նույնպես, չափագրման արժեքը ենթակա է վճարման:"
+  },
+  vat: {
+    title: "ԱԱՀ",
+    text: "Հաշվարկված արժեքը չի ներառում ԱԱՀ:"
+  },
+  contract: {
+    title: "Պայմանագիր",
+    text: "Պայմանագրի պայմանները և ձևաչափը կարող եք դիտել փաստաթղթում:"
+  }
+};
 
 const install = document.getElementById("install").checked;
+const googleAnalyticsOnlyEvents = new Set(["calculate", "option_toggle", "order_open", "order_submit_success", "idram_redirect"]);
+const prepaymentDiscounts = {
+  0: 0,
+  10: 5,
+  30: 15,
+  50: 25
+};
+const visitorId = getVisitorId();
+const activeCamp = getActiveCamp();
 
-function activateOrder(a = true) {
-  document.getElementById("order").style.opacity = a ? 1 : 0.3;
-  document.getElementById("order").style.pointerEvents = a ? "auto" : "none";
+function getCookieValue(name) {
+  return document.cookie
+    .split(";")
+    .map(function(part) { return part.trim(); })
+    .find(function(part) { return part.startsWith(name + "="); })
+    ?.slice(name.length + 1) || "";
 }
 
-function deactivateOldCost() {
-  document.getElementById("sqm").style.opacity = .3;
-  activateOrder(false);
+function setVisitorCookie(value) {
+  document.cookie = `mastergate_visitor_id=${encodeURIComponent(value)}; Max-Age=31536000; Path=/; SameSite=Lax`;
+}
+
+function sanitizeCampaignName(value) {
+  return String(value || "").replace(/[\r\n\t]/g, " ").replace(/\s+/g, " ").trim().slice(0, 80);
+}
+
+function setCampaignCookie(value) {
+  document.cookie = `mastergate_campaign=${encodeURIComponent(value)}; Max-Age=31536000; Path=/; SameSite=Lax`;
+}
+
+function getActiveCamp() {
+  const params = getCalculatorUrlParams();
+  const campFromUrl = sanitizeCampaignName(params.get("camp") || params.get("?camp"));
+  if (campFromUrl) {
+    try {
+      localStorage.setItem("mastergate_campaign", campFromUrl);
+    } catch (error) {}
+    setCampaignCookie(campFromUrl);
+    return campFromUrl;
+  }
+
+  let savedCamp = "";
+  try {
+    savedCamp = sanitizeCampaignName(localStorage.getItem("mastergate_campaign"));
+  } catch (error) {
+    savedCamp = "";
+  }
+  if (!savedCamp) {
+    try {
+      savedCamp = sanitizeCampaignName(decodeURIComponent(getCookieValue("mastergate_campaign")));
+    } catch (error) {
+      savedCamp = "";
+    }
+  }
+  if (savedCamp) setCampaignCookie(savedCamp);
+  return savedCamp;
+}
+
+function createVisitorId() {
+  if (window.crypto && typeof window.crypto.randomUUID === "function") {
+    return `mg_${window.crypto.randomUUID()}`;
+  }
+  return `mg_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 12)}`;
+}
+
+function getVisitorId() {
+  const storageKey = "mastergate_visitor_id";
+  let value = "";
+  try {
+    value = localStorage.getItem(storageKey) || "";
+  } catch (error) {
+    value = "";
+  }
+  if (!value) {
+    value = decodeURIComponent(getCookieValue("mastergate_visitor_id"));
+  }
+  if (!/^mg_[a-zA-Z0-9_-]{8,80}$/.test(value)) {
+    value = createVisitorId();
+  }
+  try {
+    localStorage.setItem(storageKey, value);
+  } catch (error) {}
+  setVisitorCookie(value);
+  return value;
+}
+
+function trackEvent(name, params = {}) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", name, params);
+  }
+  logAnalyticsClick(name, params);
+}
+
+function logAnalyticsClick(name, params = {}) {
+  if (googleAnalyticsOnlyEvents.has(name)) return;
+
+  const payload = JSON.stringify({
+    visitorId,
+    event: name,
+    params,
+    page: window.location.pathname,
+    referrer: document.referrer || ""
+  });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon("/api/analytics-click", new Blob([payload], { type: "application/json" }));
+    return;
+  }
+  fetch("/api/analytics-click", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: payload,
+    keepalive: true
+  }).catch(() => {});
+}
+
+function setCalculateStale(isStale) {
+  const calculateButton = document.getElementById("calculate");
+  calculateButton.textContent = "Հաշվել";
+  calculateButton.classList.toggle("is-stale", isStale);
+  calculateButton.classList.toggle("is-ready", !isStale && Boolean(lastCalculation));
+}
+
+function updateRangeProgress(input) {
+  const min = Number(input.min || 0);
+  const max = Number(input.max || 100);
+  const value = Number(input.value || 0);
+  const progress = ((value - min) / (max - min)) * 100;
+  input.style.setProperty("--range-progress", `${Math.max(0, Math.min(100, progress))}%`);
+}
+
+function clampDimension(value, min, max) {
+  const parsed = Number.parseFloat(String(value).replace(",", "."));
+  if (!Number.isFinite(parsed)) return null;
+  return Math.max(min, Math.min(max, Math.round(parsed * 100) / 100));
+}
+
+function makeOldCost(val=0.3) {
+  const resultBox = document.getElementById("sqm");
+  const hasRenderedResult = resultBox.textContent.trim().length > 0;
+  resultBox.style.opacity = val;
+  document.getElementById("order").style.opacity = val;
+  if(val > 0.2 && val < 0.4 ) {
+    lastCalculation = null;
+    lastLoggedCalculationKey = "";
+    setCalculateStale(hasRenderedResult);
+    document.getElementById("order").style.pointerEvents = "none";
+    document.getElementById("order").disabled = true;
+    document.getElementById("order").classList.remove("is-active");
+  } else {
+    setCalculateStale(false);
+    updateOrderAvailability();
+  }
+}
+
+function getAgreementCheckboxes() {
+  return Array.from(document.querySelectorAll(".agreement-checkbox"));
+}
+
+function getAgreementState() {
+  return getAgreementCheckboxes().reduce(function(state, checkbox) {
+    state[checkbox.dataset.agreement] = checkbox.checked;
+    return state;
+  }, {});
+}
+
+function areRequiredAgreementsAccepted() {
+  const checkboxes = getAgreementCheckboxes();
+  return checkboxes.length > 0 && checkboxes.every(function(checkbox) { return checkbox.checked; });
+}
+
+function updateOrderAvailability() {
+  const orderButton = document.getElementById("order");
+  const canOrder = Boolean(lastCalculation) && areRequiredAgreementsAccepted();
+  orderButton.style.pointerEvents = canOrder ? "auto" : "none";
+  orderButton.disabled = !canOrder;
+  orderButton.classList.toggle("is-active", canOrder);
+  orderButton.style.opacity = canOrder ? "1" : "0.3";
 }
 
 function syncW(val){
-    deactivateOldCost();
-    wVal.textContent = Number(val).toFixed(1);
+    makeOldCost();
+    updateRangeProgress(w);
+    wVal.textContent = Number(val).toFixed(2);
   }
 
 function changeW(delta){
-    deactivateOldCost();
+    makeOldCost();
     let newValue = parseFloat(w.value) + delta;
 
     // սահմանների պահպանում
     newValue = Math.max(2, Math.min(6, newValue));
 
-    w.value = newValue.toFixed(1);
+    w.value = newValue.toFixed(2);
     syncW(newValue);
 }
 
 function syncH(val){
-    deactivateOldCost();
-    hVal.textContent = Number(val).toFixed(1);
+    makeOldCost();
+    updateRangeProgress(h);
+    hVal.textContent = Number(val).toFixed(2);
   }
 
 function changeH(delta){
-    deactivateOldCost();
+    makeOldCost();
     let newValue = parseFloat(h.value) + delta;
 
     // սահմանների պահպանում
-    newValue = Math.max(2, Math.min(6, newValue));
+    newValue = Math.max(2, Math.min(4, newValue));
 
-    h.value = newValue.toFixed(1);
+    h.value = newValue.toFixed(2);
     syncH(newValue);
 }
 
 function validateFrame() {
   let installNeeded = document.getElementById("install").checked;
   document.getElementById("frameContainer").innerHTML = installNeeded ? `
-        <label onclick="deactivateOldCost()" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;">
-          Մետաղական կարկաս - 
-          <input type="checkbox" id="frame" style="transform: scale(1.5);">
+        <label>
+          <input type="checkbox" id="frame" onchange="makeOldCost()">
+          <span class="option-text">Մետաղական կարկաս</span>
         </label>
-    ` : ""; 
+        <button class="option-info" type="button" onclick="openGallery(event, 'frame')" aria-label="Մետաղական կարկաս նկարներ"><img src="/src/icons/info.svg" alt=""></button>
+    ` : "";
+  syncOrderAddressFields(installNeeded);
+}
+
+function getSelectedOptions() {
+  return {
+    auto: document.getElementById("auto").checked,
+    door: document.getElementById("door").checked,
+    install: document.getElementById("install").checked,
+    frame: document.getElementById("frame") ? document.getElementById("frame").checked : false
+  };
+}
+
+function parseBooleanQueryValue(value) {
+  if (value === null) return null;
+  const normalized = String(value).trim().toLowerCase();
+  if (["1", "true", "yes", "on", "y"].includes(normalized)) return true;
+  if (["0", "false", "no", "off", "n"].includes(normalized)) return false;
+  return null;
+}
+
+function getFirstQueryValue(params, names) {
+  for (const name of names) {
+    if (params.has(name)) return params.get(name);
+  }
+  return null;
+}
+
+function getCalculatorUrlParams() {
+  if (window.location.search) {
+    return new URLSearchParams(window.location.search);
+  }
+  const pathState = window.location.pathname.replace(/^\/+/, "");
+  if (/^(width|w|height|h|camp)=/i.test(pathState)) {
+    return new URLSearchParams(pathState);
+  }
+  return new URLSearchParams();
+}
+
+function applyQueryCalculatorState() {
+  const params = getCalculatorUrlParams();
+  const width = clampDimension(getFirstQueryValue(params, ["width", "w"]), 2, 6);
+  const height = clampDimension(getFirstQueryValue(params, ["height", "h"]), 2, 4);
+  const optionParams = {
+    auto: parseBooleanQueryValue(getFirstQueryValue(params, ["auto", "remote"])),
+    door: parseBooleanQueryValue(getFirstQueryValue(params, ["door", "wicket"])),
+    install: parseBooleanQueryValue(getFirstQueryValue(params, ["install", "installation"])),
+    frame: parseBooleanQueryValue(getFirstQueryValue(params, ["frame", "metalFrame"]))
+  };
+  const hasQueryState = width !== null || height !== null || Object.values(optionParams).some(function(value) { return value !== null; });
+
+  if (width !== null) {
+    w.value = width.toFixed(2);
+    wVal.textContent = width.toFixed(2);
+    updateRangeProgress(w);
+  }
+  if (height !== null) {
+    h.value = height.toFixed(2);
+    hVal.textContent = height.toFixed(2);
+    updateRangeProgress(h);
+  }
+  if (hasQueryState) {
+    document.getElementById("auto").checked = optionParams.auto === true;
+    document.getElementById("door").checked = optionParams.door === true;
+    document.getElementById("install").checked = optionParams.install === true;
+  }
+
+  validateFrame();
+  if (hasQueryState && document.getElementById("frame")) {
+    document.getElementById("frame").checked = optionParams.frame === true && document.getElementById("install").checked;
+  }
+  syncOrderAddressFields(document.getElementById("install").checked);
+
+  if (hasQueryState) {
+    lastCalculation = null;
+    lastLoggedCalculationKey = "";
+    setCalculateStale(true);
+    updateOrderAvailability();
+  }
 }
 
 function calc() {
-
-  const w = parseFloat(document.getElementById("w").value);
-  const h = parseFloat(document.getElementById("h").value);
-
-  const auto = document.getElementById("auto").checked;
-  const door = document.getElementById("door").checked;
-  const frame = document.getElementById("frame") ? document.getElementById("frame").checked : false;
-
-  let wSelected = products.find(p => p.w === w);
-  let hSelected = stdh === h;
-  let wMatched = !!wSelected;
-  let hMatched = !!hSelected;
-  let assembly = 0;
-
-// validating complects with standard widths and height
-  if (!wSelected) {
-    wSelected = products.find(p => p.w >= w);
-    if (!wSelected) {
-      document.getElementById("sqm").innerHTML =
-        "Տվյալ լայնության համար անհրաժեշտ է անհատական հաշվարկ";
-      return;
-    } else {
-      assembly = 50000;
-    }
+  if (shouldShowPhoneGate()) {
+    openPhoneGate();
+    return;
   }
-
-  let lines = [];
-  let complect = wSelected.price;
-  let total = complect;
-
-// remote 
-  const sqm = w * h;
-  if (!auto) {
-    const motorPrice = (sqm <= 10) ? 147000 : 160000;
-    total -= motorPrice;
-    lines.push(`● Ստանդարտ չափ ${"(" +wSelected.w + "x2.5) <br> 5 հատ " + Math.round(wSelected.w*100) + "x50սմ սեկցիա" + " - "+(complect-motorPrice).toLocaleString()}&nbsp;AMD`);
-  } else {
-    lines.push(`● Ստանդարտ չափ ${"(" +wSelected.w + "x2.5) <br> 5 հատ " + Math.round(wSelected.w*100) + "x50սմ սեկցիա" + " - "+(complect).toLocaleString()}&nbsp;AMD`);
-  }
-
-// height
-  let panelHeight = 0.5;
-  let panelPrice = 90000;
-  if (!hSelected) {
-    let panelsCount = h/panelHeight;
-    let panelsDifference = panelsCount - 5;
-    
-    if (panelsDifference>2||panelsDifference<-1) {
-      document.getElementById("sqm").innerHTML =
-        "Տվյալ բարձրության համար անհրաժեշտ է անհատական հաշվարկ";
-      return;
-    } else {
-      total+= Math.ceil(panelsDifference)*Math.round(panelPrice * w / 1000 / 6)*1000;
-      if(Math.ceil(panelsDifference) !== 0) {
-        lines.push(`● Լրացուցիչ սեկցիաներ <br>
-          ${Math.ceil(panelsDifference)} հատ ${Math.round(w*100)}x50սմ սեկցիա - 
-          ${parseInt(Math.ceil(panelsDifference) * Math.round(panelPrice * w / 1000 / 6))},000&nbsp;AMD
-          `);
-      }
-      // cuts
-      if(Math.ceil(panelsDifference) === panelsDifference) {
-      } else {
-          //horizontal cuts
-          assembly += 50000;
-      }
-      //vertical cuts
-      if(panelsDifference>0)
-      assembly += Math.ceil(panelsDifference)*10000;
-    }
-  }
-
-  let passingDoor = 200000;
-
-    if (door) {
-    total += passingDoor;
-    lines.push("● Դռնակ / կալիտկա - 200,000&nbsp;AMD");
-  }
-//assembly
-  if (wMatched&&hMatched) {
-  } else {
-    total += assembly;
-    if(assembly)lines.push("● Կտրում, հավաքում - " + assembly/1000 + ",000&nbsp;AMD");
-  }
-//installation
-  const install = document.getElementById("install").checked;
-  if (install) {
-    let i = 100000;
-    if((sqm>10)) i += 50000;
-    total+= i;
-    lines.push("● Տեղադրում - " + i/1000 + ",000&nbsp;AMD");
-  } else {
-    activateOrder(false);
-  }
-//frame
-  if (frame) {
-    let framePrice = 50000;
-    if(sqm>10) framePrice+= 25000;
-    total += framePrice;
-    lines.push("● Մետաղական կարկաս - " + framePrice/1000 + ",000&nbsp;AMD");
-  } 
-
-  // sqm price
-  const sqmPrice = Math.round(total / sqm);
-
-  const badge = `
-    <div class="sqm-badge">
-      ${sqmPrice.toLocaleString()} դրամ / մ²
-    </div>
-  `;
-let html = `
-    <div style="margin-bottom:10px;font-weight:bold;color:#ff7a00;">
-      Արժեքը՝ <br>
-    </div>
-  `;
-
-  lines.push()
-  html += lines.map(l => `<div>${l}</div>`).join("");
-  html += ` <div style="margin-bottom:10px;font-weight:bold;color:#ff7a00;">
-  Ընդհանուր - ${total.toLocaleString()} AMD
-  </div>`;
-  html += "<div class='warning'>*Արժեքը չի ներառում ԱԱՀ</div>";
-  html += "<div class='warning'>*Չափագրումից հետո պատվերը չեղարկելու դեպքում չափագրման արժեքը (20.000 դրամ) ենթակա է վճարման</div>";
-  html += "<div class='warning'>*Չափագրման ժամանակ դարպասի արժեքը կարող է փոխվել մինչև +&nbsp;/&nbsp;−&nbsp;50.000&nbsp;դրամ</div>";
-  html += badge;
-
-  document.getElementById("sqm").innerHTML = html;
-  document.getElementById("sqm").style.opacity = 1;
-  activateOrder(install);
+  performCalculation();
 }
+
+function performCalculation() {
+  const result = MastergateCalculator.calculateGateQuote({
+    width: parseFloat(document.getElementById("w").value),
+    height: parseFloat(document.getElementById("h").value),
+    ...getSelectedOptions()
+  });
+
+  lastCalculation = {
+    width: result.width,
+    height: result.height,
+    area: result.area,
+    auto: result.auto,
+    door: result.door,
+    install: result.install,
+    frame: result.frame,
+    matchedStandardWidth: result.matchedStandardWidth,
+    matchedStandardHeight: result.matchedStandardHeight,
+    selectedStandardWidth: result.selectedStandardWidth,
+    individualRequired: result.individualRequired,
+    individualReason: result.individualReason,
+    total: result.total,
+    sqmPrice: result.sqmPrice,
+    lines: result.lines
+  };
+
+  document.getElementById("sqm").innerHTML = result.html;
+  setCalculateStale(false);
+  makeOldCost(1);
+  updateOrderAvailability();
+  trackEvent("calculate", {
+    width: lastCalculation.width,
+    height: lastCalculation.height,
+    area: lastCalculation.area,
+    total: lastCalculation.total,
+    install: lastCalculation.install,
+    individual_required: lastCalculation.individualRequired,
+    option_toggles: {
+      auto: lastCalculation.auto,
+      door: lastCalculation.door,
+      install: lastCalculation.install,
+      frame: lastCalculation.frame
+    }
+  });
+  logCalculation(lastCalculation);
+}
+
+function shouldShowPhoneGate() {
+  const storageSuffix = `_${visitorId}`;
+  if (localStorage.getItem(`mastergate_phone_gate_passed${storageSuffix}`) === "true") return false;
+  const count = Number(localStorage.getItem(`mastergate_calculate_clicks${storageSuffix}`) || "0") + 1;
+  localStorage.setItem(`mastergate_calculate_clicks${storageSuffix}`, String(count));
+  return count >= 2;
+}
+
+function openPhoneGate() {
+  setPhoneGateStatus("");
+  openModal(document.getElementById("phoneGateModal"));
+  document.getElementById("phoneGateInput").focus();
+}
+
+function closePhoneGate() {
+  closeModal(document.getElementById("phoneGateModal"));
+}
+
+function setPhoneGateStatus(message, type) {
+  const status = document.getElementById("phoneGateStatus");
+  status.textContent = message || "";
+  status.classList.toggle("is-success", type === "success");
+  status.classList.toggle("is-error", type === "error");
+}
+
+function setOrderPhoneFromGate(phone, countryIso, nationalPhone) {
+  const targetInput = document.getElementById("customerPhone");
+  const targetCountry = document.getElementById("phoneCountry");
+  if (!targetInput || !targetCountry) return;
+
+  const normalizedCountry = String(countryIso || "AM").toUpperCase();
+  const visiblePhone = String(nationalPhone || "").trim();
+  const valueToShow = visiblePhone || String(phone || "").trim();
+  targetCountry.value = normalizedCountry;
+  if (phonePlugin) {
+    if (typeof phonePlugin.setCountry === "function") {
+      phonePlugin.setCountry(normalizedCountry.toLowerCase());
+    }
+    if (typeof phonePlugin.setNumber === "function" && phone) {
+      phonePlugin.setNumber(phone);
+    }
+  }
+  if (valueToShow) {
+    targetInput.value = valueToShow;
+  }
+  normalizeArmenianPhoneInput(targetInput);
+  targetInput.dispatchEvent(new Event("input", { bubbles: true }));
+  targetInput.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
+function syncPhoneGateToOrderPhone(phone) {
+  const sourceInput = document.getElementById("phoneGateInput");
+  const sourceCountry = document.getElementById("phoneGateCountry");
+  if (!sourceInput || !sourceCountry) return;
+
+  const selectedCountry = getSelectedPhoneCountry(phoneGatePlugin);
+  const countryIso = (selectedCountry.iso2 || sourceCountry.value || "AM").toUpperCase();
+  const fullPhone = phone || getNormalizedPhoneNumber("phoneGateInput", phoneGatePlugin);
+  const nationalPhone = sourceInput.value.trim();
+  savedPhoneGatePhone = {
+    phone: fullPhone,
+    country: countryIso,
+    national: nationalPhone
+  };
+  localStorage.setItem("mastergate_phone_gate_phone", JSON.stringify(savedPhoneGatePhone));
+  setOrderPhoneFromGate(fullPhone, countryIso, nationalPhone);
+}
+
+function applySavedPhoneGateToOrderPhone() {
+  try {
+    const saved = savedPhoneGatePhone || JSON.parse(localStorage.getItem("mastergate_phone_gate_phone") || "{}");
+    if (saved.phone) {
+      savedPhoneGatePhone = saved;
+      setOrderPhoneFromGate(saved.phone, saved.country, saved.national);
+    }
+  } catch (error) {
+    localStorage.removeItem("mastergate_phone_gate_phone");
+  }
+}
+
+function applySavedPhoneGateToOrderPhoneRepeated() {
+  applySavedPhoneGateToOrderPhone();
+  requestAnimationFrame(applySavedPhoneGateToOrderPhone);
+  setTimeout(applySavedPhoneGateToOrderPhone, 80);
+  setTimeout(applySavedPhoneGateToOrderPhone, 240);
+}
+
+function openModal(modal) {
+  clearTimeout(modal.closeTimer);
+  document.body.classList.add("modal-locked");
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closeModal(modal) {
+  if (!modal.classList.contains("open")) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  clearTimeout(modal.closeTimer);
+  modal.closeTimer = setTimeout(() => {
+    if (!document.querySelector(".modal.open")) {
+      document.body.classList.remove("modal-locked");
+    }
+  }, 240);
+}
+
+function updateOrderTotalSummary() {
+  const value = document.getElementById("orderTotalValue");
+  const vatValue = document.getElementById("orderTotalVatValue");
+  const prepaymentSummary = document.getElementById("orderPrepaymentSummary");
+  const prepaymentValue = document.getElementById("orderPrepaymentValue");
+  const prepaymentVatValue = document.getElementById("orderPrepaymentVatValue");
+  const oldPriceValue = document.getElementById("orderOldPriceValue");
+  const discountBadge = document.getElementById("orderDiscountBadge");
+  if (!value || !vatValue || !prepaymentSummary || !lastCalculation) return;
+
+  if (Number.isFinite(lastCalculation.total)) {
+    const prepaymentPercent = getSelectedPrepaymentPercent();
+    const pricing = calculateOrderPricing(lastCalculation.total, prepaymentPercent);
+    prepaymentSummary.hidden = prepaymentPercent === 0;
+    value.textContent = `${pricing.discountedTotal.toLocaleString()} AMD`;
+    value.classList.toggle("is-discounted", pricing.discountPercent > 0);
+    prepaymentValue.textContent = `${pricing.prepaymentAmount.toLocaleString()} AMD`;
+    prepaymentVatValue.textContent = `Ներառյալ ԱԱՀ՝ ${pricing.prepaymentWithVat.toLocaleString()} AMD`;
+    oldPriceValue.hidden = pricing.discountPercent === 0;
+    discountBadge.hidden = pricing.discountPercent === 0;
+    oldPriceValue.textContent = `${lastCalculation.total.toLocaleString()} AMD`;
+    discountBadge.textContent = `-${pricing.discountPercent}%`;
+    vatValue.textContent = `Ներառյալ ԱԱՀ՝ ${pricing.totalWithVat.toLocaleString()} AMD`;
+  } else {
+    value.textContent = "Անհատական հաշվարկ";
+    prepaymentSummary.hidden = getSelectedPrepaymentPercent() === 0;
+    value.classList.remove("is-discounted");
+    prepaymentValue.textContent = "Անհատական հաշվարկ";
+    prepaymentVatValue.textContent = "Ներառյալ ԱԱՀ՝ անհատական հաշվարկ";
+    oldPriceValue.hidden = true;
+    discountBadge.hidden = true;
+    vatValue.textContent = "Ներառյալ ԱԱՀ՝ անհատական հաշվարկ";
+  }
+}
+
+function getSelectedPrepaymentPercent() {
+  return Number(document.getElementById("prepaymentPercent").value || 0);
+}
+
+function calculateOrderPricing(total, prepaymentPercent) {
+  const discountPercent = prepaymentDiscounts[prepaymentPercent] || 0;
+  const discountAmount = Math.round(total * discountPercent / 100);
+  const discountedTotal = Math.max(0, total - discountAmount);
+  return {
+    prepaymentPercent,
+    discountPercent,
+    discountAmount,
+    discountedTotal,
+    prepaymentAmount: Math.round(total * prepaymentPercent / 100),
+    prepaymentWithVat: Math.round(total * prepaymentPercent / 100 * 1.2),
+    totalWithVat: Math.round(discountedTotal * 1.2)
+  };
+}
+
+function updatePaymentProviderVisibility(shouldTrack = false) {
+  const prepaymentPercent = getSelectedPrepaymentPercent();
+  const providerField = document.getElementById("paymentProviderField");
+  providerField.hidden = prepaymentPercent === 0;
+  if (prepaymentPercent === 0) {
+    document.querySelectorAll("input[name='paymentProvider']").forEach(function(input) {
+      input.checked = false;
+    });
+  } else {
+    document.querySelector("input[name='paymentProvider'][value='idram']").checked = true;
+    document.querySelector("input[name='paymentProvider'][value='card']").checked = false;
+  }
+  if (shouldTrack) {
+    trackEvent("prepayment_select", { percent: prepaymentPercent });
+  }
+  updateOrderTotalSummary();
+}
+
+function getSelectedPaymentProvider() {
+  const selected = document.querySelector("input[name='paymentProvider']:checked");
+  return selected ? selected.value : "";
+}
+
+function setFormStatus(message, type) {
+  const status = document.getElementById("formStatus");
+  status.textContent = message || "";
+  status.classList.toggle("is-success", type === "success");
+  status.classList.toggle("is-error", type === "error");
+}
+
+function submitIdramPayment(payment) {
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = payment.action;
+  form.style.display = "none";
+  Object.entries(payment.fields || {}).forEach(function([name, value]) {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value;
+    form.appendChild(input);
+  });
+  document.body.appendChild(form);
+  form.submit();
+}
+
+function updatePhoneFieldLabel() {
+  const labels = {
+    phone: "Ձեր հեռախոսահամարը",
+    whatsapp: "Ձեր WhatsApp-ի հեռախոսահամարը",
+    viber: "Ձեր Viber-ի հեռախոսահամարը"
+  };
+  const method = document.getElementById("contactMethod").value;
+  document.getElementById("phoneFieldLabel").textContent = labels[method] || labels.phone;
+}
+
+async function openOrderPopup() {
+  if (!lastCalculation) return;
+  if (!areRequiredAgreementsAccepted()) {
+    updateOrderAvailability();
+    return;
+  }
+  setFormStatus("");
+
+  if (lastCalculation.install && addressRegionsPromise) {
+    const addressRegionsLoaded = await addressRegionsPromise;
+    if (!addressRegionsLoaded) {
+      setFormStatus("Հասցեների ցանկը չհաջողվեց բեռնել", "error");
+    }
+  }
+
+  updatePaymentProviderVisibility();
+  syncOrderAddressFields(lastCalculation.install);
+  openModal(document.getElementById("orderModal"));
+  applySavedPhoneGateToOrderPhoneRepeated();
+  trackEvent("order_open", {
+    total: lastCalculation.total,
+    install: lastCalculation.install,
+    individual_required: lastCalculation.individualRequired
+  });
+  document.getElementById("customerPhone").focus();
+}
+
+function closeOrderPopup() {
+  closeModal(document.getElementById("orderModal"));
+}
+
+async function openGallery(event, key) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const modal = document.getElementById("galleryModal");
+  const stage = document.getElementById("galleryStage");
+  const title = document.getElementById("galleryTitle");
+  const counter = document.getElementById("galleryCounter");
+  const videos = galleryVideos[key] || [];
+
+  galleryImages = [];
+  galleryIndex = 0;
+  title.textContent = galleryTitles[key] || "Նկարներ";
+  stage.classList.toggle("has-videos", Boolean(videos.length));
+  counter.textContent = "";
+  setGalleryNavigationVisible(!videos.length);
+  openModal(modal);
+
+  if (videos.length) {
+    renderGalleryVideos(videos);
+    return;
+  }
+
+  stage.innerHTML = "<div class='gallery-empty'>Բեռնվում է...</div>";
+
+  try {
+    const response = await fetch(`/api/gallery/${key}`);
+    const data = await response.json();
+    galleryImages = Array.isArray(data.images) ? data.images : [];
+    renderGalleryImage();
+  } catch (error) {
+    stage.innerHTML = "<div class='gallery-empty'>Չհաջողվեց բեռնել նկարները</div>";
+  }
+}
+
+function closeGallery() {
+  const stage = document.getElementById("galleryStage");
+  stage.innerHTML = "";
+  stage.classList.remove("has-videos");
+  setGalleryNavigationVisible(true);
+  closeModal(document.getElementById("galleryModal"));
+}
+
+function formatAgreementDate(offsetDays) {
+  const date = new Date();
+  date.setDate(date.getDate() + offsetDays);
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  return `${day}.${month}.${date.getFullYear()}`;
+}
+
+function getContractPointsHtml() {
+  const measurementDeadline = formatAgreementDate(3);
+  const installationDeadline = formatAgreementDate(10);
+  return `<div class="agreement-points-title">Պայմանագրի հիմնական կետերն են՝</div>
+  <ul class="agreement-points">
+    <li>Չափագրման այցի վերջնաժամկետն է ${measurementDeadline}:</li>
+    <li>Չափագրումից հետո դարպասի արժեքի 50%-ը ենթակա է վճարման որպես կանխավճար:</li>
+    <li>Տեղադրման վերջնաժամկետն է ${installationDeadline}:</li>
+    <li>Հանձնման-ընդունման ակտի ստորագրումից հետո՝ 3 օրվա ընթացքում, վճարվում է մյուս 50%-ը:</li>
+  </ul>`;
+}
+
+function getContractDocumentLinkHtml(documentPath, documentName) {
+  return `<p class="agreement-document-link">Ամբողջական պայմանագիրը <a href="${documentPath}" download="${documentName}">այստեղ</a>։</p>`;
+}
+
+function openAgreementInfo(event, key) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const info = agreementInfo[key] || agreementInfo.vat;
+  const modal = document.getElementById("agreementModal");
+  const title = document.getElementById("agreementTitle");
+  const text = document.getElementById("agreementText");
+  activeAgreementKey = key;
+  activeAgreementStatusTracked = false;
+
+  title.textContent = info.title;
+  text.textContent = info.text;
+
+  if (key === "contract") {
+    const documentPath = lastCalculation && lastCalculation.install
+      ? "/src/docs/order_doc_1.pdf"
+      : "/src/docs/order_doc_2.pdf";
+    const documentName = lastCalculation && lastCalculation.install
+      ? "order_doc_1.pdf"
+      : "order_doc_2.pdf";
+    text.innerHTML = `${getContractPointsHtml()}${getContractDocumentLinkHtml(documentPath, documentName)}`;
+  }
+
+  openModal(modal);
+}
+
+function suppressAgreementClick(event) {
+  event.preventDefault();
+  event.stopPropagation();
+}
+
+function handleAgreementPointer(event, key) {
+  if (event.pointerType === "mouse" && event.button !== 0) {
+    return;
+  }
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  const label = event.currentTarget;
+  const checkbox = label.querySelector(`.agreement-checkbox[data-agreement="${key}"]`);
+  if (!checkbox) return;
+
+  if (checkbox.checked) {
+    checkbox.checked = false;
+    checkbox.dispatchEvent(new Event("change", { bubbles: true }));
+    return;
+  }
+
+  openAgreementInfo(event, key);
+}
+
+function handleAgreementKey(event, key) {
+  if (event.key === " " || event.key === "Enter") {
+    const checkbox = event.currentTarget;
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (checkbox.checked) {
+      checkbox.checked = false;
+      checkbox.dispatchEvent(new Event("change", { bubbles: true }));
+      return;
+    }
+
+    openAgreementInfo(event, key);
+  }
+}
+
+function acceptAgreementFromInfo() {
+  if (activeAgreementKey) {
+    const checkbox = document.querySelector(`.agreement-checkbox[data-agreement="${activeAgreementKey}"]`);
+    if (checkbox) {
+      checkbox.checked = true;
+      checkbox.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+  }
+  trackEvent("agreement_read", { agreement: activeAgreementKey });
+  trackAgreementStatus("accepted");
+  closeAgreementInfo(true);
+}
+
+function trackAgreementStatus(status) {
+  if (!activeAgreementKey || activeAgreementStatusTracked) return;
+  activeAgreementStatusTracked = true;
+  trackEvent("agreement_status", {
+    agreement: activeAgreementKey,
+    status
+  });
+}
+
+function closeAgreementInfo(skipStatus = false) {
+  const modal = document.getElementById("agreementModal");
+  if (modal.classList.contains("open") && !skipStatus) {
+    trackAgreementStatus("declined");
+  }
+  closeModal(modal);
+}
+
+function changeGalleryImage(direction) {
+  if (!galleryImages.length) return;
+  galleryIndex = (galleryIndex + direction + galleryImages.length) % galleryImages.length;
+  renderGalleryImage();
+}
+
+function renderGalleryImage() {
+  const stage = document.getElementById("galleryStage");
+  const counter = document.getElementById("galleryCounter");
+
+  if (!galleryImages.length) {
+    stage.innerHTML = "<div class='gallery-empty'>Այս բաժնում դեռ նկարներ չկան</div>";
+    counter.textContent = "";
+    return;
+  }
+
+  stage.innerHTML = `<img src="${galleryImages[galleryIndex]}" alt="">`;
+  counter.textContent = `${galleryIndex + 1} / ${galleryImages.length}`;
+}
+
+function setGalleryNavigationVisible(isVisible) {
+  document.getElementById("galleryPrev").classList.toggle("is-hidden", !isVisible);
+  document.getElementById("galleryNext").classList.toggle("is-hidden", !isVisible);
+}
+
+function renderGalleryVideos(videos) {
+  const stage = document.getElementById("galleryStage");
+  const safeVideos = videos.map(function(video) {
+    return `<iframe class="gallery-video" src="${video.src}" title="${video.title}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+  }).join("");
+  stage.innerHTML = safeVideos;
+}
+
+function closeTopModal() {
+  const openModals = Array.from(document.querySelectorAll(".modal.open"));
+  const topModal = openModals[openModals.length - 1];
+  if (!topModal) return false;
+
+  if (topModal.id === "galleryModal") closeGallery();
+  else if (topModal.id === "agreementModal") closeAgreementInfo();
+  else if (topModal.id === "orderModal") closeOrderPopup();
+  else if (topModal.id === "phoneGateModal") closePhoneGate();
+  else closeModal(topModal);
+
+  return true;
+}
+
+document.getElementById("orderModal").addEventListener("click", function(event) {
+  if (event.target === this) closeOrderPopup();
+});
+document.getElementById("contactMethod").addEventListener("change", updatePhoneFieldLabel);
+document.getElementById("prepaymentPercent").addEventListener("change", function() {
+  updatePaymentProviderVisibility(true);
+});
+document.querySelectorAll("input[name='paymentProvider']").forEach(function(input) {
+  input.addEventListener("click", function(event) {
+    if (event.currentTarget.value === "idram" && getSelectedPrepaymentPercent() > 0) {
+      event.preventDefault();
+    }
+    updatePaymentProviderVisibility();
+  });
+  input.addEventListener("change", function() {
+    if (getSelectedPrepaymentPercent() > 0) {
+      document.querySelector("input[name='paymentProvider'][value='idram']").checked = true;
+      document.querySelector("input[name='paymentProvider'][value='card']").checked = false;
+    }
+    updateOrderTotalSummary();
+  });
+});
+document.getElementById("phoneGateModal").addEventListener("click", function(event) {
+  event.stopPropagation();
+});
+
+document.getElementById("galleryModal").addEventListener("click", function(event) {
+  if (event.target === this) closeGallery();
+});
+
+document.addEventListener("keydown", function(event) {
+  const agreementModal = document.getElementById("agreementModal");
+  const agreementOpen = agreementModal.classList.contains("open");
+
+  if (event.key === "Escape") {
+    if (closeTopModal()) event.preventDefault();
+  }
+  if (agreementOpen && event.key === "Enter" && !event.target.closest("a, button, input, select, textarea")) {
+    event.preventDefault();
+    acceptAgreementFromInfo();
+  }
+  if (document.getElementById("galleryModal").classList.contains("open")) {
+    if (event.key === "ArrowLeft") changeGalleryImage(-1);
+    if (event.key === "ArrowRight") changeGalleryImage(1);
+  }
+});
+
+document.getElementById("orderForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  if (!lastCalculation) return;
+
+  const submitButton = document.getElementById("sendOrder");
+  submitButton.disabled = true;
+  setFormStatus("Ուղարկվում է...");
+
+  try {
+    applySavedPhoneGateToOrderPhone();
+    const phoneInput = document.getElementById("customerPhone");
+    normalizeArmenianPhoneInput(phoneInput);
+    const selectedCountry = getSelectedPhoneCountry();
+    const fullPhone = getNormalizedPhoneNumber();
+    if (!isValidPhone(fullPhone)) {
+      throw new Error("Լրացրեք վավեր հեռախոսահամար");
+    }
+
+    const address = getOrderAddress();
+    if (!address) {
+      throw new Error("Ընտրեք մարզը և համայնքը");
+    }
+    const prepaymentPercent = getSelectedPrepaymentPercent();
+    const paymentProvider = getSelectedPaymentProvider();
+    if (prepaymentPercent > 0 && !paymentProvider) {
+      throw new Error("Ընտրեք վճարման եղանակը");
+    }
+
+    const response = await fetch("/api/order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        visitorId,
+        contactMethod: document.getElementById("contactMethod").value,
+        phone: fullPhone,
+        phoneNational: phoneInput.value.trim(),
+        phoneDialCode: selectedCountry.dialCode || "",
+        phoneCountry: document.getElementById("phoneCountry").value,
+        prepaymentPercent,
+        paymentMethod: prepaymentPercent > 0 ? paymentProvider : "none",
+        address,
+        addressRegion: document.getElementById("addressRegion").value,
+        addressCommunity: document.getElementById("addressCommunity").value,
+        agreements: getAgreementState(),
+        calculation: lastCalculation
+      })
+    });
+
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(result.error || "Չհաջողվեց ուղարկել հայտը");
+    }
+
+    if (result.payment && result.payment.provider === "idram") {
+      setFormStatus("Վերահղում դեպի Idram...", "success");
+      trackEvent("idram_redirect", {
+        total: lastCalculation.total,
+        install: lastCalculation.install,
+        individual_required: lastCalculation.individualRequired
+      });
+      submitIdramPayment(result.payment);
+      return;
+    }
+
+    setFormStatus("Հայտն ուղարկված է։ Մենք կկապվենք Ձեզ հետ։", "success");
+    trackEvent("order_submit_success", {
+      total: lastCalculation.total,
+      install: lastCalculation.install,
+      individual_required: lastCalculation.individualRequired
+    });
+    this.reset();
+    updatePhoneFieldLabel();
+    updatePaymentProviderVisibility();
+    syncOrderAddressFields(lastCalculation.install);
+  } catch (error) {
+    setFormStatus(error.message, "error");
+  } finally {
+    submitButton.disabled = false;
+  }
+});
+
+document.getElementById("phoneGateForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  const submitButton = document.getElementById("phoneGateSubmit");
+  const phoneInput = document.getElementById("phoneGateInput");
+  normalizeArmenianPhoneInput(phoneInput, "phoneGateCountry");
+  const selectedCountry = getSelectedPhoneCountry(phoneGatePlugin);
+  const phone = getNormalizedPhoneNumber("phoneGateInput", phoneGatePlugin);
+  submitButton.disabled = true;
+  setPhoneGateStatus("Պահպանվում է...");
+
+  try {
+    if (!isValidPhone(phone, "phoneGateInput", phoneGatePlugin, "phoneGateCountry")) {
+      throw new Error("Լրացրեք վավեր հեռախոսահամար");
+    }
+    const response = await fetch("/api/phone-gate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        visitorId,
+        phone,
+        phoneNational: phoneInput.value.trim(),
+        phoneDialCode: selectedCountry.dialCode || "",
+        phoneCountry: document.getElementById("phoneGateCountry").value,
+        page: window.location.pathname
+      })
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(result.error || "Լրացրեք վավեր հեռախոսահամար");
+    }
+
+    localStorage.setItem(`mastergate_phone_gate_passed_${visitorId}`, "true");
+    syncPhoneGateToOrderPhone(phone);
+    setPhoneGateStatus("Շնորհակալություն։", "success");
+    closePhoneGate();
+    performCalculation();
+  } catch (error) {
+    setPhoneGateStatus(error.message, "error");
+  } finally {
+    submitButton.disabled = false;
+  }
+});
+
+function populateAddressRegions() {
+  const regionSelect = document.getElementById("addressRegion");
+  regionSelect.innerHTML = '<option value="">Ընտրեք մարզը</option>';
+  Object.keys(armeniaCommunities).forEach(function(region) {
+    regionSelect.add(new Option(region, region));
+  });
+}
+
+async function loadAddressRegions() {
+  try {
+    const response = await fetch("/src/data/armenia-regions.json");
+    if (!response.ok) throw new Error("Address data request failed");
+
+    const data = await response.json();
+    if (!data || Array.isArray(data) || typeof data !== "object") {
+      throw new Error("Address data is invalid");
+    }
+
+    armeniaCommunities = data;
+    populateAddressRegions();
+    syncOrderAddressFields(document.getElementById("install").checked);
+    return true;
+  } catch (error) {
+    console.error("Failed to load address regions:", error);
+    return false;
+  }
+}
+
+function updateAddressCommunities() {
+  const region = document.getElementById("addressRegion").value;
+  const communitySelect = document.getElementById("addressCommunity");
+  const communitySearch = document.getElementById("addressCommunitySearch");
+  const communityList = document.getElementById("addressCommunityList");
+  communitySelect.innerHTML = '<option value="">Ընտրեք համայնքը</option>';
+  communitySearch.value = "";
+  communityList.scrollTop = 0;
+
+  (armeniaCommunities[region] || []).forEach(function(community) {
+    communitySelect.add(new Option(community, community));
+  });
+  communitySelect.disabled = !region;
+  communitySearch.disabled = !region;
+  closeCommunityDropdown();
+  updateCustomerAddress();
+}
+
+function normalizeCommunitySearch(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9ա-ֆև]+/g, " ")
+    .replace(/\s+/g, " ");
+}
+
+function getFilteredCommunities(query) {
+  const region = document.getElementById("addressRegion").value;
+  const normalizedQuery = normalizeCommunitySearch(query);
+  const compactQuery = normalizedQuery.replace(/\s/g, "");
+
+  return (armeniaCommunities[region] || []).filter(function(community) {
+    if (!normalizedQuery) return true;
+
+    const armenianName = normalizeCommunitySearch(community);
+    const latinName = normalizeCommunitySearch(armenianToLatin(community));
+    const compactArmenianName = armenianName.replace(/\s/g, "");
+    const compactLatinName = latinName.replace(/\s/g, "");
+    const latinAliases = community.startsWith("Ե") ? [`y${compactLatinName}`] : [];
+
+    return armenianName.includes(normalizedQuery)
+      || latinName.includes(normalizedQuery)
+      || compactArmenianName.includes(compactQuery)
+      || compactLatinName.includes(compactQuery)
+      || latinAliases.some(function(alias) { return alias.includes(compactQuery); });
+  });
+}
+
+function renderCommunityOptions(query) {
+  const list = document.getElementById("addressCommunityList");
+  const communities = getFilteredCommunities(query);
+  list.innerHTML = "";
+  list.scrollTop = 0;
+  highlightedCommunityIndex = -1;
+
+  if (!communities.length) {
+    const empty = document.createElement("div");
+    empty.className = "community-empty";
+    empty.textContent = "Արդյունք չի գտնվել";
+    list.appendChild(empty);
+    return;
+  }
+
+  communities.forEach(function(community) {
+    const option = document.createElement("button");
+    option.type = "button";
+    option.className = "community-option";
+    option.setAttribute("role", "option");
+    option.dataset.value = community;
+    option.textContent = community;
+    option.addEventListener("click", function() {
+      selectCommunity(community);
+    });
+    list.appendChild(option);
+  });
+}
+
+function openCommunityDropdown() {
+  const search = document.getElementById("addressCommunitySearch");
+  if (search.disabled) return;
+
+  renderCommunityOptions(search.value);
+  document.getElementById("addressCommunityList").hidden = false;
+  search.setAttribute("aria-expanded", "true");
+}
+
+function closeCommunityDropdown() {
+  document.getElementById("addressCommunityList").hidden = true;
+  document.getElementById("addressCommunitySearch").setAttribute("aria-expanded", "false");
+  highlightedCommunityIndex = -1;
+}
+
+function selectCommunity(community) {
+  const communitySelect = document.getElementById("addressCommunity");
+  const communitySearch = document.getElementById("addressCommunitySearch");
+  communitySelect.value = community;
+  communitySearch.value = community;
+  updateCustomerAddress();
+  closeCommunityDropdown();
+}
+
+function moveCommunityHighlight(direction) {
+  const options = Array.from(document.querySelectorAll("#addressCommunityList .community-option"));
+  if (!options.length) return;
+
+  highlightedCommunityIndex = highlightedCommunityIndex < 0
+    ? (direction > 0 ? 0 : options.length - 1)
+    : (highlightedCommunityIndex + direction + options.length) % options.length;
+  options.forEach(function(option, index) {
+    option.classList.toggle("is-highlighted", index === highlightedCommunityIndex);
+  });
+  options[highlightedCommunityIndex].scrollIntoView({ block: "nearest" });
+}
+
+function updateCustomerAddress() {
+  const region = document.getElementById("addressRegion").value;
+  const community = document.getElementById("addressCommunity").value;
+  const addressInput = document.getElementById("customerAddress");
+
+  if (!document.getElementById("install").checked) {
+    addressInput.value = pickupAddress;
+  } else if (region && community) {
+    addressInput.value = region === "Երևան"
+      ? `ք. Երևան, ${community}`
+      : `${region} մարզ, ${community} համայնք`;
+  } else {
+    addressInput.value = "";
+  }
+}
+
+function syncOrderAddressFields(installationSelected) {
+  const pickupField = document.getElementById("pickupAddressField");
+  const installationFields = document.getElementById("installationAddressFields");
+  const regionSelect = document.getElementById("addressRegion");
+  const communitySelect = document.getElementById("addressCommunity");
+  const communitySearch = document.getElementById("addressCommunitySearch");
+
+  pickupField.hidden = installationSelected;
+  installationFields.hidden = !installationSelected;
+  regionSelect.disabled = !installationSelected || !Object.keys(armeniaCommunities).length;
+  communitySelect.disabled = !installationSelected || !regionSelect.value;
+  communitySearch.disabled = !installationSelected || !regionSelect.value;
+
+  if (!installationSelected) {
+    closeCommunityDropdown();
+  }
+
+  if (!installationSelected) {
+    document.getElementById("customerAddress").value = pickupAddress;
+  } else {
+    updateCustomerAddress();
+  }
+}
+
+function getOrderAddress() {
+  if (!lastCalculation.install) return pickupAddress;
+
+  const region = document.getElementById("addressRegion").value;
+  const community = document.getElementById("addressCommunity").value;
+  if (!region || !community || !(armeniaCommunities[region] || []).includes(community)) return "";
+
+  return region === "Երևան" ? `ք. Երևան, ${community}` : `${region} մարզ, ${community} համայնք`;
+}
+
+document.getElementById("addressRegion").addEventListener("change", updateAddressCommunities);
+document.getElementById("addressCommunity").addEventListener("change", function() {
+  document.getElementById("addressCommunitySearch").value = this.value;
+  updateCustomerAddress();
+  closeCommunityDropdown();
+});
+document.getElementById("addressCommunitySearch").addEventListener("focus", openCommunityDropdown);
+document.getElementById("addressCommunitySearch").addEventListener("click", openCommunityDropdown);
+document.getElementById("addressCommunitySearch").addEventListener("input", function() {
+  document.getElementById("addressCommunity").value = "";
+  updateCustomerAddress();
+  openCommunityDropdown();
+});
+document.getElementById("addressCommunitySearch").addEventListener("keydown", function(event) {
+  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    event.preventDefault();
+    if (document.getElementById("addressCommunityList").hidden) openCommunityDropdown();
+    moveCommunityHighlight(event.key === "ArrowDown" ? 1 : -1);
+  } else if (event.key === "Enter" && highlightedCommunityIndex >= 0) {
+    event.preventDefault();
+    const options = document.querySelectorAll("#addressCommunityList .community-option");
+    options[highlightedCommunityIndex]?.click();
+  } else if (event.key === "Escape") {
+    closeCommunityDropdown();
+  }
+});
+document.addEventListener("pointerdown", function(event) {
+  if (!document.getElementById("communityPicker").contains(event.target)) {
+    closeCommunityDropdown();
+  }
+});
+syncOrderAddressFields(document.getElementById("install").checked);
+addressRegionsPromise = loadAddressRegions();
+
+function getSelectedPhoneCountry(plugin = phonePlugin) {
+  return plugin ? (plugin.getSelectedCountry() || {}) : {};
+}
+
+function getNormalizedPhoneNumber(inputId = "customerPhone", plugin = phonePlugin) {
+  const phoneInput = document.getElementById(inputId);
+  if (!plugin) return phoneInput.value.trim();
+  return plugin.getNumber() || phoneInput.value.trim();
+}
+
+function isValidPhone(value, inputId = "customerPhone", plugin = phonePlugin, countryInputId = "phoneCountry") {
+  if (isArmenianPhoneSelected(countryInputId) && startsWithZero(document.getElementById(inputId).value)) {
+    return false;
+  }
+  if (!plugin) return /^\+\d{6,15}$/.test(value.replace(/\s/g, ""));
+  if (typeof plugin.isValidNumberPrecise === "function") {
+    return plugin.isValidNumberPrecise();
+  }
+  return plugin.isValidNumber();
+}
+
+function logCalculation(calculation) {
+  const calculationKey = JSON.stringify(calculation);
+  if (calculationKey === lastLoggedCalculationKey) return;
+  lastLoggedCalculationKey = calculationKey;
+
+  fetch("/api/calculation-log", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      visitorId,
+      camp: activeCamp,
+      calculation
+    })
+  }).catch(() => {});
+}
+
+if (window.intlTelInput) {
+  const armenianPhoneTranslations = {
+    selectedCountryAriaLabel: "Փոխել երկիրը. ընտրված է ${countryName} (${dialCode})",
+    noCountrySelected: "Ընտրել երկիրը",
+    countryListAriaLabel: "Երկրների ցանկ",
+    searchPlaceholder: "Որոնել երկիրը",
+    clearSearchAriaLabel: "Մաքրել որոնումը",
+    searchEmptyState: "Արդյունք չի գտնվել",
+    searchSummaryAria: function(count) {
+      return count ? `Գտնվել է ${count} արդյունք` : "Արդյունք չի գտնվել";
+    }
+  };
+
+  const armenianCountryNames = window.MastergateCountryNamesHy || {};
+  const countryNameOverrides = {};
+  Object.entries(armenianCountryNames).forEach(function([iso2, name]) {
+    countryNameOverrides[iso2.toLowerCase()] = `${name} ${armenianToLatin(name)}`;
+  });
+
+  function createPhonePlugin(input, countryInput) {
+    const plugin = window.intlTelInput(input, {
+      initialCountry: "am",
+      excludeCountries: ["az"],
+      countryNameOverrides: countryNameOverrides,
+      separateDialCode: true,
+      countrySelectorMode: "DROPDOWN",
+      countryOrder: ["am", "ru", "ge", "us", "fr", "de"],
+      placeholderNumberPolicy: "AGGRESSIVE",
+      uiTranslations: armenianPhoneTranslations
+    });
+
+    input.addEventListener("countrychange", function() {
+      countryInput.value = (getSelectedPhoneCountry(plugin).iso2 || "am").toUpperCase();
+      normalizeArmenianPhoneInput(input, countryInput.id);
+      requestAnimationFrame(function() { closePhoneCountryDropdown(input, plugin); });
+      const searchInput = input.closest(".phone-input")?.querySelector(".iti__search-input");
+      if (searchInput && searchInput.value) {
+        searchInput.value = "";
+        searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    });
+    input.addEventListener("input", function() {
+      normalizeArmenianPhoneInput(input, countryInput.id);
+    });
+    input.closest(".phone-input")?.querySelector(".iti__selected-country")?.addEventListener("click", function() {
+      requestAnimationFrame(refreshPhoneCountryNames);
+      setTimeout(function() { constrainPhoneCountryDropdown(input); }, 50);
+    });
+    input.closest(".iti")?.querySelector(".iti__country-list")?.addEventListener("click", function(event) {
+      if (!event.target.closest(".iti__country")) return;
+      setTimeout(function() { closePhoneCountryDropdown(input, plugin); }, 0);
+    });
+
+    return plugin;
+  }
+
+  function localizePhoneCountryNames() {
+    document.querySelectorAll(".iti__country").forEach(function(countryItem) {
+      const visibleName = armenianCountryNames[(countryItem.dataset.iso2 || "").toUpperCase()];
+      const nameElement = countryItem.querySelector(".iti__country-name");
+      if (visibleName && nameElement && nameElement.textContent.trim() !== visibleName) {
+        nameElement.textContent = visibleName;
+      }
+    });
+  }
+
+  function observePhoneCountryList() {
+    const phoneCountryList = document.querySelector(".iti__country-list");
+    if (!phoneCountryList || phoneCountryList.dataset.localizationObserved) return;
+
+    phoneCountryList.dataset.localizationObserved = "true";
+    new MutationObserver(function() {
+      localizePhoneCountryNames();
+    }).observe(phoneCountryList, { childList: true, subtree: true, characterData: true });
+  }
+
+  function refreshPhoneCountryNames() {
+    localizePhoneCountryNames();
+    observePhoneCountryList();
+    constrainPhoneCountryDropdown(document.activeElement?.closest(".phone-input")?.querySelector("input[type='tel']"));
+  }
+
+  function constrainPhoneCountryDropdown(input) {
+    const wrapper = input?.closest(".phone-input")?.querySelector(".iti") || document.querySelector(".phone-input .iti");
+    const dropdown = wrapper?.querySelector(".iti__dropdown-content") || document.querySelector(".iti__dropdown-content");
+    if (!wrapper || !dropdown) return;
+
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const maxWidth = Math.max(180, Math.min(wrapperRect.width, window.innerWidth - 24));
+    dropdown.style.boxSizing = "border-box";
+    dropdown.style.width = `${maxWidth}px`;
+    dropdown.style.maxWidth = `${maxWidth}px`;
+    dropdown.style.minWidth = "0";
+    dropdown.style.left = "0";
+    dropdown.style.right = "auto";
+  }
+
+  phonePlugin = createPhonePlugin(document.getElementById("customerPhone"), document.getElementById("phoneCountry"));
+  phoneGatePlugin = createPhonePlugin(document.getElementById("phoneGateInput"), document.getElementById("phoneGateCountry"));
+  refreshPhoneCountryNames();
+  document.addEventListener("input", function(event) {
+    if (event.target.matches(".iti__search-input")) {
+      requestAnimationFrame(localizePhoneCountryNames);
+      requestAnimationFrame(function() {
+        constrainPhoneCountryDropdown(event.target.closest(".phone-input")?.querySelector("input[type='tel']"));
+      });
+    }
+  });
+}
+
+function isArmenianPhoneSelected(countryInputId = "phoneCountry") {
+  return (document.getElementById(countryInputId).value || "AM").toUpperCase() === "AM";
+}
+
+function startsWithZero(value) {
+  return /^0/.test(String(value || "").replace(/\D/g, ""));
+}
+
+function normalizeArmenianPhoneInput(input, countryInputId = "phoneCountry") {
+  if (!input || !isArmenianPhoneSelected(countryInputId)) return;
+
+  const normalized = input.value.replace(/^\D*0+/, "");
+  if (normalized !== input.value) {
+    const cursor = Math.max(0, (input.selectionStart || 0) - (input.value.length - normalized.length));
+    input.value = normalized;
+    input.setSelectionRange(cursor, cursor);
+  }
+}
+
+function closePhoneCountryDropdown(input = document.getElementById("customerPhone"), plugin = null) {
+  const phoneInput = typeof input === "string" ? document.getElementById(input) : input;
+  const activePlugin = plugin || (phoneInput?.id === "phoneGateInput" ? phoneGatePlugin : phonePlugin);
+  if (typeof activePlugin?.closeCountrySelector === "function") {
+    activePlugin.closeCountrySelector();
+    return;
+  }
+  const selectedCountry = phoneInput && phoneInput.closest(".iti")?.querySelector(".iti__selected-country");
+  if (selectedCountry?.getAttribute("aria-expanded") === "true") {
+    selectedCountry.click();
+  }
+}
+
+function armenianToLatin(value) {
+  const letters = {
+    "ա": "a", "բ": "b", "գ": "g", "դ": "d", "ե": "e", "զ": "z",
+    "է": "e", "ը": "y", "թ": "t", "ժ": "zh", "ի": "i", "լ": "l",
+    "խ": "kh", "ծ": "ts", "կ": "k", "հ": "h", "ձ": "dz", "ղ": "gh",
+    "ճ": "tch", "մ": "m", "յ": "y", "ն": "n", "շ": "sh", "ո": "o",
+    "չ": "ch", "պ": "p", "ջ": "j", "ռ": "r", "ս": "s", "վ": "v",
+    "տ": "t", "ր": "r", "ց": "ts", "ւ": "u", "փ": "p", "ք": "q",
+    "և": "ev", "օ": "o", "ֆ": "f"
+  };
+  return value.toLowerCase().replace(/ու/g, "u").replace(/[ա-ֆև]/g, function(letter) {
+    return letters[letter] || "";
+  });
+}
+
+validateFrame();
+[w, h].forEach(updateRangeProgress);
+applyQueryCalculatorState();
 
 </script>
 
